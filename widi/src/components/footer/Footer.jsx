@@ -14,11 +14,11 @@ export default function Footer() {
   return (
     <div className="bottomMenu">
       <ul className="ulBottomMenu" id="menu">
-        <IconsFooterContainer NavLink={"#"} icon={<HomeRounded />} />
+        <IconsFooterContainer link={"/"} icon={<HomeRounded />} />
         <IconsFooterContainer link={"#"} icon={<Chat />} />
         <IconsFooterContainer link={"#"} icon={<ShoppingCartRounded />} />
         <IconsFooterContainer link={"#"} icon={<Favorite />} />
-        <IconsFooterContainer link={"#"} icon={<EmailRounded />} />
+        <IconsFooterContainer link={"/contact"} icon={<EmailRounded />} />
         <IconsFooterContainer link={"#"} icon={<Settings />} />
 
         <div className="indicator"></div>

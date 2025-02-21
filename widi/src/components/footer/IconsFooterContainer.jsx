@@ -1,11 +1,12 @@
+import { NavLink } from 'react-router-dom'
 import './Footer.css'
 
 export default function IconsFooterContainer({link, icon}){
     return(
         <li>
-            <a href={link}>
+            <NavLink to={link}>
                 <span className="spanIcon">{icon}</span>
-            </a>
+            </NavLink>
         </li>
     )
 }

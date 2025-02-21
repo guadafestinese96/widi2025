@@ -28,12 +28,15 @@ export default function Inicio() {
 
   return (
     <div className="inicioContainer">
+      
       <VerTodos />
         {search.length > 0 ? (searchedProducts.length >0? (
         <ListPerfumesCard perfumes={searchedProducts} />
       ): <div>No se encontró el perfume</div>) : (
         <ListPerfumesCard perfumes={perfumes} />
       )}
+
+      
     </div>
   );
 }
