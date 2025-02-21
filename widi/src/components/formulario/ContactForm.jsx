@@ -17,7 +17,7 @@ export default function ContactForm() {
       <input id="nombre" type="number" name="nombre" className="inputWhatsapp" required/>
 
       <label htmlFor="email">Email:</label>
-      <input id="email" type="email" name="email" />
+      <input id="email" type="email" name="email" required/>
 
       <ValidationError prefix="Email" field="email" errors={state.errors} />
     
