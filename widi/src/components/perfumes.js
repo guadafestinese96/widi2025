@@ -6,7 +6,7 @@ const perfumes = [
         nombre: "212 classic men",
         genero: "masculino",
         precio: "32000",
-        img: "assets/212claH-removebg-preview.png"
+        img: "212claH-removebg-preview.png"
     },
     {
         id: 2,
