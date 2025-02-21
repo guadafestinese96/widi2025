@@ -6,7 +6,7 @@ const perfumes = [
         nombre: "212 classic men",
         genero: "masculino",
         precio: "32000",
-        img: "src/assets/212claH-removebg-preview.png"
+        img: "assets/212claH-removebg-preview.png"
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const perfumes = [
         nombre: "212 classic women",
         genero: "femenino",
         precio: "32000",
-        img: "src/assets/212claM-removebg-preview.png"
+        img: "assets/212claM-removebg-preview.png"
     },{
         id: 3,
         idMarca: "ch",

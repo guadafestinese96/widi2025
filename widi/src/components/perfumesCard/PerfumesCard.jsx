@@ -6,6 +6,7 @@ import CartContext from "../context/CartContext";
 export default function PerfumesCard({ perfume }) {
   const { cart, addToCart } = useContext(CartContext);
     const isItemInCart = cart.find(item=> item.id === perfume.id)
+
   return (
     <div className="cardContainer">
       <img src={`../../${perfume.img}`} alt="imgCard" />
