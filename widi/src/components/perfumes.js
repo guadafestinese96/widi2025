@@ -15,7 +15,7 @@ const perfumes = [
         nombre: "212 classic women",
         genero: "femenino",
         precio: "32000",
-        img: "assets/212claM-removebg-preview.png"
+        img: "212claM-removebg-preview.png"
     },{
         id: 3,
         idMarca: "ch",
@@ -23,7 +23,7 @@ const perfumes = [
         nombre: "212 vip rose",
         genero: "femenino",
         precio: "32000",
-        img: "src/assets/212rose-removebg-preview.png"
+        img: "212rose-removebg-preview.png"
     },{
         id: 4,
         idMarca: "ch",
@@ -31,7 +31,7 @@ const perfumes = [
         nombre: "212 sexy",
         genero: "femenino",
         precio: "32000",
-        img: "src/assets/212sexy-removebg-preview.png"
+        img: "212sexy-removebg-preview.png"
     },{
         id: 5,
         idMarca: "ch",
@@ -39,7 +39,7 @@ const perfumes = [
         nombre: "212 vip men",
         genero: "masculino",
         precio: "32000",
-        img: "src/assets/212vipH-removebg-preview.png"
+        img: "212vipH-removebg-preview.png"
     },{
         id: 6,
         idMarca: "ch",
@@ -47,7 +47,7 @@ const perfumes = [
         nombre: "212 vip women",
         genero: "femenino",
         precio: "32000",
-        img: "src/assets/212vipM-removebg-preview.png"
+        img: "212vipM-removebg-preview.png"
     },{
         id: 7,
         idMarca: "armani",
@@ -55,7 +55,7 @@ const perfumes = [
         nombre: "Acqua di gio men",
         genero: "masculino",
         precio: "32000",
-        img: "src/assets/acquaDiGioH.png"
+        img: "acquaDiGioH.png"
     }
 ]
 
