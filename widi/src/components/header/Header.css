@@ -41,7 +41,7 @@
     outline: none;
     border: none;
     background: transparent;
-    color: var(--colorSecundario);
+    color: black;
     padding-left: 8px;
     font-size: 15px;
 }

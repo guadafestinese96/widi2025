@@ -24,7 +24,7 @@ export default function Header() {
       </NavLink>
       <div className="inputBox">
         <SearchRounded className="searchIcon" />
-        <input type="text" placeholder="Search" className="inputSearch" onChange={(e)=>{
+        <input type="text" placeholder="Buscar" className="inputSearch" onChange={(e)=>{
             setSearch(e.target.value)
             console.log(search)
         }}/>
