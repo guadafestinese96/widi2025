@@ -9,7 +9,7 @@ export default function PerfumesCard({ perfume }) {
 
   return (
     <div className="cardContainer">
-      <img src={`/src/assets/${perfume.img}`} alt="imgCard" />
+      <img src={`./src/assets/${perfume.img}`} alt="imgCard" />
       <h3>{perfume.marca}</h3>
       <h4>{perfume.nombre}</h4>
       <p>${perfume.precio}</p>
