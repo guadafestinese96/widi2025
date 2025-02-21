@@ -10,13 +10,11 @@ import "./Cart.css";
 export default function CartItem({ perfume }) {
   const { removeFromCart } = useContext(CartContext);
   
-  const incrementQuantity = (perfume)=>{
-    return perfume.quantity++;
-  }
+
   
   return (
     <div className="cartItemContainer">
-      <img src={perfume.img} alt="imgItem" />
+      <img src={`/images/${perfume.img}`} alt="imgItem" />
 
       <div className="cartItemDetails">
 
