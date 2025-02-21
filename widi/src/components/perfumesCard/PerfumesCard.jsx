@@ -8,7 +8,7 @@ export default function PerfumesCard({ perfume }) {
     const isItemInCart = cart.find(item=> item.id === perfume.id)
   return (
     <div className="cardContainer">
-      <img src={perfume.img} alt="imgCard" />
+      <img src={`../../${perfume.img}`} alt="imgCard" />
       <h3>{perfume.marca}</h3>
       <h4>{perfume.nombre}</h4>
       <p>${perfume.precio}</p>
