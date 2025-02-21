@@ -1,0 +1,13 @@
+.verTodosContainer{
+    display: flex;
+    justify-content: end;
+    font-size: 12px;
+    align-items: center;
+}
+
+.MuiSvgIcon-root{
+    color: var(--colorPrimario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,41 @@
+/*CART ITEM*/
+.cartItemContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--colorPrimario);
+    
+}
+
+.cartItemContainer img{
+    width: 50px;
+    filter: drop-shadow(3px 3px 2px white);
+}
+
+.cartItemContainer h2{
+    font-size: 12px;
+    max-width: 100px;
+    text-align: center;
+}
+
+.cartItemDetails{
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    align-items: center;
+    margin: 5px;
+    flex-direction: column;
+}
+
+.cartItemButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartItemContainer .cartItemDetails .cartItemButtons .MuiSvgIcon-root{
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+}
