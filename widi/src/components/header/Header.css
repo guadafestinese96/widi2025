@@ -138,7 +138,7 @@
     right: 0px;
     top: 100%;
     z-index: 100;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.9);
     color: var(--colorSecundario);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     

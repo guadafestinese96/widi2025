@@ -3,14 +3,12 @@ import {
   DeleteForeverRounded,
   RemoveRounded,
 } from "@mui/icons-material";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import CartContext from "../context/CartContext";
 import "./Cart.css";
 
 export default function CartItem({ perfume }) {
   const { removeFromCart } = useContext(CartContext);
-  
-
   
   return (
     <div className="cartItemContainer">

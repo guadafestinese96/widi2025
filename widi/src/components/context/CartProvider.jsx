@@ -6,11 +6,13 @@ export default function CartProvider({ children }) {
     localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : []
   );
 
+
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   console.log(cart);
+
 
   const addToCart = (perfume) => {
     setCart(carritoAnterior=>{
