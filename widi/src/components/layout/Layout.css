@@ -1,8 +1,9 @@
-.body{
+
+.bodyLayout .childrenContainer{
     display: flex;
-    flex-wrap: wrap;
-    height: 100%;
     margin-top: 60px;
     padding: 20px;
+    justify-content: center;
+    align-items: center;   
+    padding-bottom: 80px;
 }
-

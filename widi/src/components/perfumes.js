@@ -109,7 +109,7 @@ const perfumes = [
         idMarca: "xerjoff",
         marca: "Xerjoff",
         nombre: "Erba Pura",
-        genero: "masculino",
+        genero: "unisex",
         precio: "32000",
         img: "erba-removebg-preview.png"
     }
