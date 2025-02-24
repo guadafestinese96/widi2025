@@ -4,7 +4,7 @@ import { useContext, useEffect } from "react";
 import perfumes from "../perfumes.js";
 import VerTodos from "../verTodos/VerTodos.jsx";
 import SearchContext from "../context/SearchContext.jsx";
-import PerfumesDestacados from "../perfumesDestacados/perfumesDestacados.jsx";
+import PerfumesDestacados from "../perfumesDestacados/PerfumesDestacados.jsx";
 
 export default function Inicio() {
   useEffect(() => {
