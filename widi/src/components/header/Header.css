@@ -78,7 +78,7 @@
 
 /*CARRITO*/
 
-.shoppingCart{
+ .shoppingCart{
     position: relative;
     width: 30px;
     height: 30px;
@@ -87,9 +87,9 @@
    
 }
 
-.cartIcon{
+.labelCart .shoppingCart .cartIcon{
     font-size: 30px;
-    color: var(--colorSecundario);
+    color: var(--colorPrimario);
 }
 
 .cartContent{
@@ -100,6 +100,7 @@
     min-width: 20px;
     min-height: 20px;
     position: absolute;
+    border: 1px solid black;
     top: -8px;
     right: 0;
     display: flex;

@@ -50,9 +50,8 @@
     border: none;
 }
 
-.cartItemContainer .cartItemDetails .cartItemButtons .btnIncrement .MuiSvgIcon-root, 
-.cartItemContainer .cartItemDetails .cartItemButtons .btnDecrement .MuiSvgIcon-root{
-    color: var(--colorPrimario);
+.cartItemContainer .cartItemDetails .cartItemButtons .btnIncrement .MuiSvgIcon-root, .cartItemContainer .cartItemDetails .cartItemButtons .btnDecrement .MuiSvgIcon-root{
+    color: black;
     width: 15px;
     height: 15px;
     margin: 2px;
@@ -90,7 +89,3 @@
     background-color: var(--colorPrimario);
 }
 
-.cartItemContainer .cartItemDetails .cartItemButtons .btnDecrement:disabled .MuiSvgIcon-root, 
-.cartItemContainer .cartItemDetails .cartItemButtons .btnIncrement:disabled .MuiSvgIcon-root{
-    color: var(--colorSecundario);
-} 
