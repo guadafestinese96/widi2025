@@ -37,10 +37,27 @@ export default function CartProvider({ children }) {
     setCart([]);
   };
 
+  const incrementQuantity = (id) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
+  };
+
+  const decrementQuantity = (id) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === id && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
+    );
+  };
 
   return (
     <CartContext.Provider
-      value={{ cart, removeFromCart, clearCart, addToCart }}
+      value={{ cart, removeFromCart, clearCart, addToCart, incrementQuantity, decrementQuantity }}
     >
       {children}
     </CartContext.Provider>

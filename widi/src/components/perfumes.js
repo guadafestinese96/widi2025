@@ -56,6 +56,38 @@ const perfumes = [
         genero: "masculino",
         precio: "32000",
         img: "acquaDiGioH.png"
+    },{
+        id: 8,
+        idMarca: "armani",
+        marca: "Armani",
+        nombre: "Stronger With You",
+        genero: "masculino",
+        precio: "32000",
+        img: "you.png"
+    },{
+        id: 9,
+        idMarca: "armani",
+        marca: "Armani",
+        nombre: "My Way",
+        genero: "femenino",
+        precio: "32000",
+        img: "myWay.png"
+    },{
+        id: 10,
+        idMarca: "armani",
+        marca: "Armani",
+        nombre: "Code",
+        genero: "femenino",
+        precio: "32000",
+        img: "codeM.png"
+    },{
+        id: 11,
+        idMarca: "armani",
+        marca: "Armani",
+        nombre: "Code",
+        genero: "masculino",
+        precio: "32000",
+        img: "codeH.png"
     }
 ]
 
