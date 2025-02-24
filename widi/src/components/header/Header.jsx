@@ -12,11 +12,11 @@ import CartItem from "../cart/CartItem";
 import SearchContext from "../context/SearchContext";
 
 export default function Header() {
-  const { cart, clearCart } = useContext(CartContext);
+  const { cart, clearCart, formatNumber, totalPrecioCarrito } = useContext(CartContext);
   const checkCartId = useId();
-  const {search, setSearch} = useContext(SearchContext);
+  const { search, setSearch } = useContext(SearchContext);
 
-
+  
   return (
     <div className="headerContainer">
       <NavLink to={"/"}>
@@ -24,12 +24,16 @@ export default function Header() {
       </NavLink>
       <div className="inputBox">
         <SearchRounded className="searchIcon" />
-        <input type="text" placeholder="Buscar" className="inputSearch" onChange={(e)=>{
-            setSearch(e.target.value)
-            console.log(search)
-        }}/>
+        <input
+          type="text"
+          placeholder="Buscar"
+          className="inputSearch"
+          onChange={(e) => {
+            setSearch(e.target.value);
+            console.log(search);
+          }}
+        />
       </div>
-
 
       {/* <div className="profileContainer">
         <div className="imgBox">
@@ -45,22 +49,28 @@ export default function Header() {
       <label htmlFor={checkCartId} className="labelCart">
         <div className="shoppingCart">
           <ShoppingCartRounded className="cartIcon" />
-          {cart.length>0 && (
+          {cart.length > 0 && (
             <div className="cartContent">
-            <p className="pContent">{cart.length}</p>
-          </div>
+              <p className="pContent">{cart.length}</p>
+            </div>
           )}
-          
         </div>
       </label>
       <input type="checkbox" id={checkCartId} hidden />
 
       <div className="cartDropdown">
         {cart.map((perfume) => (
-          <CartItem perfume={perfume} key={perfume.id}/>
+          <CartItem perfume={perfume} key={perfume.id} />
         ))}
-        {cart.length>0 ? (<button onClick={() => clearCart()}>Borrar carrito</button>) : (<div>No hay productos en el carrito</div>)}
-          
+        {cart.length > 0 ? (
+          <div className="footerCarrito">
+            <p>Total: $ {formatNumber(totalPrecioCarrito)} </p>
+            <button onClick={() => clearCart()} className="btnBorrarCarrito"> Borrar carrito</button>
+            <button className="btnFinalizarCompra">Finalizar compra</button>
+          </div>
+        ) : (
+          <div>No hay productos en el carrito</div>
+        )}
       </div>
     </div>
   );

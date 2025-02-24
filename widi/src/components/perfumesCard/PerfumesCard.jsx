@@ -5,7 +5,7 @@ import CartContext from "../context/CartContext";
 
 export default function PerfumesCard({ perfume }) {
   const { cart, addToCart } = useContext(CartContext);
-    const isItemInCart = cart.find(item=> item.id === perfume.id)
+  const isItemInCart = cart.find((item) => item.id === perfume.id);
 
   return (
     <div className="cardContainer">
@@ -13,12 +13,16 @@ export default function PerfumesCard({ perfume }) {
       <h3>{perfume.marca}</h3>
       <h4>{perfume.nombre}</h4>
       <p>${perfume.precio}</p>
-      {isItemInCart ? (<CheckRounded/>) : ( 
+      {isItemInCart ? (
+        <button className="addedToCart">
+          <CheckRounded />
+        </button>
+        
+      ) : (
         <button className="addToCart" onClick={() => addToCart(perfume)}>
-      <AddShoppingCartRounded />
-      </button>
+          <AddShoppingCartRounded />
+        </button>
       )}
-      
     </div>
   );
 }

@@ -46,6 +46,8 @@
     justify-content: center;
     align-items: center;
     margin: 0px 5px 0px 5px;
+    border-radius: 8px;
+    border: none;
 }
 
 .cartItemContainer .cartItemDetails .cartItemButtons .btnIncrement .MuiSvgIcon-root, 
@@ -64,6 +66,7 @@
 
 .cartItemContainer .cartItemDetails .cartItemButtons .btnRemoveCart {
     background-color: unset;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;

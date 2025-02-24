@@ -55,9 +55,19 @@ export default function CartProvider({ children }) {
     );
   };
 
+  const formatNumber = (number) => {
+    return new Intl.NumberFormat('es-ES').format(number);
+  };
+
+  
+  const totalPrecioCarrito = cart.reduce((acumulador, item)=>{
+      return acumulador + (item.quantity * item.precio)
+    },0)
+  
+
   return (
     <CartContext.Provider
-      value={{ cart, removeFromCart, clearCart, addToCart, incrementQuantity, decrementQuantity }}
+      value={{ cart, removeFromCart, clearCart, addToCart, incrementQuantity, decrementQuantity, totalPrecioCarrito, formatNumber }}
     >
       {children}
     </CartContext.Provider>

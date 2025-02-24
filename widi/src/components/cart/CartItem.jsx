@@ -8,7 +8,7 @@ import CartContext from "../context/CartContext";
 import "./Cart.css";
 
 export default function CartItem({ perfume }) {
-  const { removeFromCart, incrementQuantity, decrementQuantity } =
+  const { removeFromCart, incrementQuantity, decrementQuantity, formatNumber } =
     useContext(CartContext);
 
   return (
@@ -18,7 +18,7 @@ export default function CartItem({ perfume }) {
       <div className="cartItemDetails">
         <div className="cartNombrePrecio">
           <h2>{perfume.nombre}</h2>
-          <p className="itemPriceValue">$ {perfume.precio}</p>
+          <p className="itemPriceValue">$ {formatNumber(perfume.precio)}</p>
         </div>
 
         <div className="cartItemButtons">

@@ -88,6 +88,30 @@ const perfumes = [
         genero: "masculino",
         precio: "32000",
         img: "codeH.png"
+    },{
+        id: 12,
+        idMarca: "tomFord",
+        marca: "Tom Ford",
+        nombre: "Ombre Leather",
+        genero: "masculino",
+        precio: "32000",
+        img: "ombre-removebg-preview.png"
+    },{
+        id: 13,
+        idMarca: "creed",
+        marca: "Creed",
+        nombre: "Adventus",
+        genero: "masculino",
+        precio: "32000",
+        img: "creed-removebg-preview.png"
+    },{
+        id: 14,
+        idMarca: "xerjoff",
+        marca: "Xerjoff",
+        nombre: "Erba Pura",
+        genero: "masculino",
+        precio: "32000",
+        img: "erba-removebg-preview.png"
     }
 ]
 

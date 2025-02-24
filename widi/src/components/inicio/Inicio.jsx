@@ -4,6 +4,7 @@ import { useContext, useEffect } from "react";
 import perfumes from "../perfumes.js";
 import VerTodos from "../verTodos/VerTodos.jsx";
 import SearchContext from "../context/SearchContext.jsx";
+import PerfumesDestacados from "../perfumesDestacados/perfumesDestacados.jsx";
 
 export default function Inicio() {
   useEffect(() => {
@@ -18,25 +19,21 @@ export default function Inicio() {
     menuLi.forEach((n) => n.addEventListener("click", setMenuActive));
   }, []);
 
-  const { search } = useContext(SearchContext);
-
-  const searchedProducts = perfumes.filter(
-    (item) => (
-      item.nombre.toLowerCase().includes(search.toLowerCase()) ||
-      item.marca.toLowerCase().includes(search.toLowerCase()) 
-    ));
+  const { search, searchedProducts } = useContext(SearchContext);
 
   return (
     <div className="inicioContainer">
-      
       <VerTodos />
-        {search.length > 0 ? (searchedProducts.length >0? (
-        <ListPerfumesCard perfumes={searchedProducts} />
-      ): <div>No se encontró el perfume</div>) : (
-        <ListPerfumesCard perfumes={perfumes} />
+      <PerfumesDestacados />
+      {search.length > 0 ? (
+        searchedProducts.length > 0 ? (
+          <ListPerfumesCard perfumes={searchedProducts} />
+        ) : (
+          <div>No se encontró el perfume</div>
+        )
+      ) : (
+        ""
       )}
-
-      
     </div>
   );
 }

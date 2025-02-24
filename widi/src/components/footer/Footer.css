@@ -95,7 +95,7 @@
     transition: 0.5s;
   }
   
-  .indicator::before{
+  /* .indicator::before{
     content: '';
     position: absolute;
     top: 50%;
@@ -117,4 +117,4 @@
     background: transparent;
     border-top-left-radius: 8px;
     box-shadow: 0px -10px 0 0 white;
-  }
+  } */
