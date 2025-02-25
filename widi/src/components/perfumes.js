@@ -6,7 +6,8 @@ const perfumes = [
         nombre: "212 classic men",
         genero: "masculino",
         precio: "32000",
-        img: "212claH-removebg-preview.png"
+        img: "212claH-removebg-preview.png",
+        stock: 0
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const perfumes = [
         nombre: "212 classic women",
         genero: "femenino",
         precio: "32000",
-        img: "212claM-removebg-preview.png"
+        img: "212claM-removebg-preview.png",
+        stock: 0
     },{
         id: 3,
         idMarca: "ch",
@@ -23,7 +25,8 @@ const perfumes = [
         nombre: "212 vip rose",
         genero: "femenino",
         precio: "32000",
-        img: "212rose-removebg-preview.png"
+        img: "212rose-removebg-preview.png",
+        stock: 1
     },{
         id: 4,
         idMarca: "ch",
@@ -31,7 +34,8 @@ const perfumes = [
         nombre: "212 sexy",
         genero: "femenino",
         precio: "32000",
-        img: "212sexy-removebg-preview.png"
+        img: "212sexy-removebg-preview.png",
+        stock: 0
     },{
         id: 5,
         idMarca: "ch",
@@ -39,7 +43,8 @@ const perfumes = [
         nombre: "212 vip men",
         genero: "masculino",
         precio: "32000",
-        img: "212vipH-removebg-preview.png"
+        img: "212vipH-removebg-preview.png",
+        stock: 0
     },{
         id: 6,
         idMarca: "ch",
@@ -47,7 +52,8 @@ const perfumes = [
         nombre: "212 vip women",
         genero: "femenino",
         precio: "32000",
-        img: "212vipM-removebg-preview.png"
+        img: "212vipM-removebg-preview.png",
+        stock: 1
     },{
         id: 7,
         idMarca: "armani",
@@ -55,7 +61,8 @@ const perfumes = [
         nombre: "Acqua di gio men",
         genero: "masculino",
         precio: "32000",
-        img: "acquaDiGioH.png"
+        img: "acquaDiGioH.png",
+        stock: 0
     },{
         id: 8,
         idMarca: "armani",
@@ -63,7 +70,8 @@ const perfumes = [
         nombre: "Stronger With You",
         genero: "masculino",
         precio: "32000",
-        img: "you.png"
+        img: "you.png",
+        stock: 0
     },{
         id: 9,
         idMarca: "armani",
@@ -71,7 +79,8 @@ const perfumes = [
         nombre: "My Way",
         genero: "femenino",
         precio: "32000",
-        img: "myWay.png"
+        img: "myWay.png",
+        stock: 0
     },{
         id: 10,
         idMarca: "armani",
@@ -79,7 +88,8 @@ const perfumes = [
         nombre: "Code",
         genero: "femenino",
         precio: "32000",
-        img: "codeM.png"
+        img: "codeM.png",
+        stock: 0
     },{
         id: 11,
         idMarca: "armani",
@@ -87,7 +97,8 @@ const perfumes = [
         nombre: "Code",
         genero: "masculino",
         precio: "32000",
-        img: "codeH.png"
+        img: "codeH.png",
+        stock: 0
     },{
         id: 12,
         idMarca: "tomFord",
@@ -95,7 +106,8 @@ const perfumes = [
         nombre: "Ombre Leather",
         genero: "masculino",
         precio: "32000",
-        img: "ombre-removebg-preview.png"
+        img: "ombre-removebg-preview.png",
+        stock: 0
     },{
         id: 13,
         idMarca: "creed",
@@ -103,7 +115,8 @@ const perfumes = [
         nombre: "Adventus",
         genero: "masculino",
         precio: "32000",
-        img: "creed-removebg-preview.png"
+        img: "creed-removebg-preview.png",
+        stock: 0
     },{
         id: 14,
         idMarca: "xerjoff",
@@ -111,7 +124,8 @@ const perfumes = [
         nombre: "Erba Pura",
         genero: "unisex",
         precio: "32000",
-        img: "erba-removebg-preview.png"
+        img: "erba-removebg-preview.png",
+        stock: 0
     }
 ]
 

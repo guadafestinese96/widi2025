@@ -1,11 +1,15 @@
 import ListPerfumesCard from "../perfumesCard/ListPerfumesCard";
 import "./Inicio.css";
 import { useContext, useEffect } from "react";
-import perfumes from "../perfumes.js";
 import VerTodos from "../verTodos/VerTodos.jsx";
 import SearchContext from "../context/SearchContext.jsx";
 import PerfumesDestacados from "../perfumesDestacados/PerfumesDestacados.jsx";
-import { Instagram, WhatsApp, WhatshotRounded } from "@mui/icons-material";
+import {
+  Favorite,
+  Instagram,
+  WhatsApp,
+  WhatshotRounded,
+} from "@mui/icons-material";
 
 export default function Inicio() {
   useEffect(() => {
@@ -24,7 +28,6 @@ export default function Inicio() {
 
   return (
     <div className="inicioContainer">
-      
       <PerfumesDestacados />
       {search.length > 0 ? (
         searchedProducts.length > 0 ? (
@@ -35,11 +38,11 @@ export default function Inicio() {
       ) : (
         ""
       )}
-      
+
       <VerTodos />
 
-      <Instagram/>
-      <WhatsApp/>
+      <Instagram />
+      <WhatsApp />
     </div>
   );
 }

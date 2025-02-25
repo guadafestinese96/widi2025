@@ -5,8 +5,6 @@ import Inicio from "./components/inicio/Inicio";
 import CartProvider from "./components/context/CartProvider";
 import SearchProvider from "./components/context/SearchProvider";
 import ContactForm from "./components/formulario/ContactForm";
-import ListPerfumesCard from "./components/perfumesCard/ListPerfumesCard";
-import perfumes from "./components/perfumes.js";
 import VerTodosPerfumes from "./components/verTodos/VerTodosPerfumes.jsx";
 
 function App() {
@@ -14,6 +12,7 @@ function App() {
     <BrowserRouter>
       <SearchProvider>
         <CartProvider>
+        
           <Layout>
             <Routes>
               <Route path="/" element={<Inicio />} />
@@ -24,6 +23,7 @@ function App() {
               />
             </Routes>
           </Layout>
+      
         </CartProvider>
       </SearchProvider>
     </BrowserRouter>

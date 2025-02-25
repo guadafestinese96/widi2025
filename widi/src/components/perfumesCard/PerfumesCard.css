@@ -37,6 +37,7 @@ font-size: 8px;
 .cardContainer .addedToCart{
     background-color: var(--colorSecundario);
     border: none;
+    cursor: pointer;
 }
 .cardContainer .addToCart .MuiSvgIcon-root, 
 .cardContainer .addedToCart .MuiSvgIcon-root{
@@ -54,4 +55,23 @@ font-size: 8px;
 .cardContainer .MuiSvgIcon-root {
     width: 20px;
     margin-top: 5px;
+}
+
+.buttonsPerfumesCard{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btnFavoritos{
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+}
+
+.btnFavoritos:hover{
+    color: var(--colorPrimario);
+}
+
+.btnFavoritos ~ .adedToFav{
+    color: var(--colorPrimario);
 }

@@ -6,10 +6,8 @@ export default function Layout({ children }) {
   return (
     <div className="bodyLayout">
       <Header />
-
-      <div className="childrenContainer">{children}</div>
-
       <Footer />
+      <div className="childrenContainer">{children}</div>
     </div>
   );
 }
