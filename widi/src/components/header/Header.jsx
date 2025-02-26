@@ -11,17 +11,16 @@ import { useContext, useId, useState } from "react";
 import CartContext from "../context/CartContext";
 import CartItem from "../cart/CartItem";
 import SearchContext from "../context/SearchContext";
-import Profile from "../login/ProfileUser";
 import Logout from "../login/Logout";
 import LoginButton from "../login/Login";
 import ProfileUser from "../login/ProfileUser";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Header() {
   const { cart, clearCart, formatNumber, totalPrecioCarrito } = useContext(CartContext);
   const checkCartId = useId();
   const { search, setSearch } = useContext(SearchContext);
 
-  
   return (
     <div className="headerContainer">
       <NavLink to={"/"}>
@@ -50,10 +49,12 @@ export default function Header() {
       <div className="toggleMenu">
         <BarChart className="toggleIcon" />
       </div> */}
-
-      <LoginButton/>
-      <ProfileUser/>
-      <Logout/>
+  <div>
+    <LoginButton/>
+    <ProfileUser/>
+    <Logout/>
+  </div>
+      
 
       <label htmlFor={checkCartId} className="labelCart">
         <div className="shoppingCart">
