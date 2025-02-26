@@ -1,5 +1,6 @@
 import {
   BarChart,
+  Login,
   SearchRounded,
   ShoppingCartRounded,
 } from "@mui/icons-material";
@@ -10,6 +11,10 @@ import { useContext, useId, useState } from "react";
 import CartContext from "../context/CartContext";
 import CartItem from "../cart/CartItem";
 import SearchContext from "../context/SearchContext";
+import Profile from "../login/ProfileUser";
+import Logout from "../login/Logout";
+import LoginButton from "../login/Login";
+import ProfileUser from "../login/ProfileUser";
 
 export default function Header() {
   const { cart, clearCart, formatNumber, totalPrecioCarrito } = useContext(CartContext);
@@ -45,6 +50,10 @@ export default function Header() {
       <div className="toggleMenu">
         <BarChart className="toggleIcon" />
       </div> */}
+
+      <LoginButton/>
+      <ProfileUser/>
+      <Logout/>
 
       <label htmlFor={checkCartId} className="labelCart">
         <div className="shoppingCart">

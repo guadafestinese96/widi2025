@@ -7,6 +7,8 @@
     padding: 10px;
     border-radius: 10px;
     width: 100px;
+    border: 1px solid var(--colorPrimario);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .perfumeDestacadoContainer img{
@@ -16,8 +18,10 @@
 }
 
 .perfumeDestacadoContainer h3{
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 10px;
+    color: var(--colorPrimario);
+    text-transform: uppercase;
 }
 
 .perfumeDestacadoContainer h4{
@@ -44,6 +48,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../../../public/images/fp10.jpg);
-    border-radius: 10px;
 }

@@ -7,12 +7,14 @@ import SearchProvider from "./components/context/SearchProvider";
 import ContactForm from "./components/formulario/ContactForm";
 import VerTodosPerfumes from "./components/verTodos/VerTodosPerfumes.jsx";
 
+
 function App() {
+
   return (
     <BrowserRouter>
+    
       <SearchProvider>
-        <CartProvider>
-        
+        <CartProvider>        
           <Layout>
             <Routes>
               <Route path="/" element={<Inicio />} />
@@ -22,8 +24,7 @@ function App() {
                 element={<VerTodosPerfumes />}
               />
             </Routes>
-          </Layout>
-      
+          </Layout>      
         </CartProvider>
       </SearchProvider>
     </BrowserRouter>
