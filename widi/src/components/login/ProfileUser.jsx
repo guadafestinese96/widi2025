@@ -1,18 +1,15 @@
-import { useAuth0 } from "@auth0/auth0-react"
-import './Login.css'
+import { useAuth0 } from "@auth0/auth0-react";
+import "./Login.css";
+import Logout from "./Logout";
 
-export default function ProfileUser(){
-    const {user, isAutenticated, isLoading} = useAuth0();
-    console.log(user)
-    if(isLoading) return <p>Cargando...</p>
+export default function ProfileUser() {
+  const { user } = useAuth0();
 
-    return(
-        isAutenticated && (
-            <div className="divUser">
-                <h2>Bienvenido {user.given_name}</h2>
-                <img src={user.picture} alt="userPicture" />
-                <p>Email: {user.email}</p>
-            </div>
-        )
-    )
+  return (
+    <div className="divUser">
+      <img src={user.picture} alt={user.name}/>
+      {/* <h2>{user.name}</h2>   
+      <p>{user.email}</p> */}
+    </div>
+  );
 }

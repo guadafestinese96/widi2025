@@ -1,3 +1,38 @@
-.divUser{
-    background-color: aqua;
+.divUser {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.divUser img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.divUser h2 {
+  font-size: 10px;
+  color: var(--colorPrimario);
+}
+
+.divUser p {
+  font-size: 8px;
+  color: var(--colorPrimario);
+}
+
+.btnLogin {
+  background-color: var(--colorPrimario);
+  font-family: "Poppins";
+  font-size: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  color: black;
+}
+
+.btnLogin:hover {
+  background-color: var(--colorSecundario);
+  cursor: pointer;
 }

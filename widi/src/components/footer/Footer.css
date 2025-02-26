@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 50px;
+    height: 60px;
     background-color: var(--colorPrimario);
     border-radius: 0 0 25px 25px ;
     z-index: 101;
@@ -34,26 +34,35 @@
     font-weight: 500;
   }
   
-  .spanIcon{
+  .divSpanIcon{
     color: var(--colorSecundario);
     position: relative;
     display: block;
     line-height: 70px;
     text-align: center;
     transition: 0.5s;
+    width: 30px;
+    height: 30px;
+  }
+
+  .iconsFooterContainerP{
+    background-color: var(--colorSecundario);
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+    text-align: center;
   }
   
-  .bottomMenu ul li a .spanIcon .MuiSvgIcon-root{
+  .bottomMenu ul li a .divSpanIcon .MuiSvgIcon-root{
     font-size: 26px;
     color: black;
   }
   
-  .bottomMenu ul li.active a .spanIcon{
-    transform: translateY(23px);
-  
+  .bottomMenu ul li.active a .divSpanIcon{
+    transform: translateY(30px);
   }
   
-  .bottomMenu ul li.active a .spanIcon .MuiSvgIcon-root{
+  .bottomMenu ul li.active a .divSpanIcon .MuiSvgIcon-root{
     color: var(--colorPrimario);
     transition: 0.5s;
   }
@@ -81,9 +90,7 @@
   .bottomMenu ul li:nth-child(5).active ~ .indicator{
     transform: translateX(calc(60px *4));
   }
-  .bottomMenu ul li:nth-child(6).active ~ .indicator{
-    transform: translateX(calc(60px *5));
-  }
+ 
   
   .indicator{
     position: absolute;
@@ -119,3 +126,60 @@
     border-top-left-radius: 8px;
     box-shadow: 0px -10px 0 0 white;
   } */
+
+
+  .cartIcon{
+    position: relative;
+    
+  }
+  .labelIconContainer{
+    display: flex;
+    justify-content: right;
+  }
+  .labelIcon{
+    position: absolute;
+    top: 5px;
+    background-color: black;
+    font-size: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+  }
+
+  /* 
+
+ .shoppingCart{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+   
+}
+
+.labelCart .shoppingCart .cartIcon{
+    font-size: 30px;
+    color: var(--colorPrimario);
+}
+
+.cartContent{
+    width: 20px;
+    height: 20px;
+    background-color: var(--colorPrimario);
+    border-radius: 100%;
+    min-width: 20px;
+    min-height: 20px;
+    position: absolute;
+    border: 1px solid black;
+    top: -8px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

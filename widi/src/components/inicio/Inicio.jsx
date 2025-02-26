@@ -10,6 +10,11 @@ import {
   WhatsApp,
   WhatshotRounded,
 } from "@mui/icons-material";
+import ProfileUser from "../login/ProfileUser.jsx";
+import LoginButton from "../login/LoginButton.jsx";
+import { useAuth0 } from "@auth0/auth0-react";
+import Logout from "../login/Logout.jsx";
+import { NavLink } from "react-router-dom";
 
 export default function Inicio() {
   useEffect(() => {
@@ -25,6 +30,7 @@ export default function Inicio() {
   }, []);
 
   const { search, searchedProducts } = useContext(SearchContext);
+  const {isAuthenticated} = useAuth0();
 
   return (
     <div className="inicioContainer">
@@ -43,6 +49,8 @@ export default function Inicio() {
 
       <Instagram />
       <WhatsApp />
+     
+
     </div>
   );
 }
