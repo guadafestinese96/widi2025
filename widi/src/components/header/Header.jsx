@@ -7,11 +7,11 @@ import {
   VerifiedUserRounded,
 } from "@mui/icons-material";
 import "./Header.css";
-import widiLogo from "../../assets/widiLogoRedondo.png";
+import widiLogo from "../../../public/images/widiLogoRedondo.png";
 import { NavLink } from "react-router-dom";
-import { useContext, useId, useState } from "react";
+import { useContext } from "react";
 import SearchContext from "../context/SearchContext";
-import { useAuth0, User } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from "../login/LoginButton";
 import ProfileUser from "../login/ProfileUser";
 import Logout from "../login/Logout";
