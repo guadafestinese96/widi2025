@@ -10,8 +10,6 @@ import "./Header.css";
 import widiLogo from "../../assets/widiLogoRedondo.png";
 import { NavLink } from "react-router-dom";
 import { useContext, useId, useState } from "react";
-import CartContext from "../context/CartContext";
-import CartItem from "../cart/CartItem";
 import SearchContext from "../context/SearchContext";
 import { useAuth0, User } from "@auth0/auth0-react";
 import LoginButton from "../login/LoginButton";
@@ -19,9 +17,7 @@ import ProfileUser from "../login/ProfileUser";
 import Logout from "../login/Logout";
 
 export default function Header() {
-  const { cart, clearCart, formatNumber, totalPrecioCarrito } =
-    useContext(CartContext);
-  const checkCartId = useId();
+ 
   const { search, setSearch } = useContext(SearchContext);
   const {isAuthenticated} = useAuth0();
 
@@ -43,16 +39,7 @@ export default function Header() {
         />
       </div>
 
-      {/* <div className="profileContainer">
-        <div className="imgBox">
-          <img src={widiLogo} alt="imgProfile" className="profileImg" />
-        </div>
-        <h2 className="userName">Guada</h2>
-      </div>
-
-      <div className="toggleMenu">
-        <BarChart className="toggleIcon" />
-      </div> */}
+     
 
       <div className="loginHeaderContainer">
         {isAuthenticated ? <ProfileUser/> :
@@ -65,7 +52,18 @@ export default function Header() {
         
       </div>
 
-      {/* <label htmlFor={checkCartId} className="labelCart">
+      
+    </div>
+  );
+}
+
+/* 
+ const { cart, clearCart, formatNumber, totalPrecioCarrito } =
+    useContext(CartContext);
+  const checkCartId = useId();
+
+
+<label htmlFor={checkCartId} className="labelCart">
         <div className="shoppingCart">
           <ShoppingCartRounded className="cartIcon" />
           {cart.length > 0 && (
@@ -75,9 +73,9 @@ export default function Header() {
           )}
         </div>
       </label>
-      <input type="checkbox" id={checkCartId} hidden /> */}
+      <input type="checkbox" id={checkCartId} hidden /> */
 
-      {/* <div className="cartDropdown">
+      /* <div className="cartDropdown">
         {cart.map((perfume) => (
           <CartItem perfume={perfume} key={perfume.id} />
         ))}
@@ -93,7 +91,16 @@ export default function Header() {
         ) : (
           <div>No hay productos en el carrito</div>
         )}
-      </div> */}
-    </div>
-  );
-}
+      </div> */
+
+
+       /* <div className="profileContainer">
+        <div className="imgBox">
+          <img src={widiLogo} alt="imgProfile" className="profileImg" />
+        </div>
+        <h2 className="userName">Guada</h2>
+      </div>
+
+      <div className="toggleMenu">
+        <BarChart className="toggleIcon" />
+      </div> */
