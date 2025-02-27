@@ -6,6 +6,7 @@ import { SearchRounded } from "@mui/icons-material";
 import LoginButton from "../login/LoginButton";
 import { useAuth0 } from "@auth0/auth0-react";
 import ProfileUser from "../login/ProfileUser";
+import Logout from "../login/Logout";
 
 const Header2Div = styled.div`
   display: flex;
@@ -74,7 +75,8 @@ export default function Header2() {
       </InputBoxContainer>
 
     <AuthDiv>
-        <LoginButton/>
+        {isAuthenticated ? <Logout/> : <LoginButton/>}
+        
         <ProfileUser/>
     </AuthDiv>
       
