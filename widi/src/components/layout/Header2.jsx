@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useContext } from "react";
 import SearchContext from "../context/SearchContext";
 import { SearchRounded } from "@mui/icons-material";
+import LoginButton from "../login/LoginButton";
 
 const Header2Div = styled.div`
   display: flex;
@@ -44,6 +45,9 @@ const InputSearch = styled.input`
     padding-left: 8px;
     font-size: 15px;
 `
+const AuthDiv = styled.div`
+    display: flex;
+`
 
 export default function Header2() {
   const { search, setSearch } = useContext(SearchContext);
@@ -65,6 +69,11 @@ export default function Header2() {
           }}
         />
       </InputBoxContainer>
+
+    <AuthDiv>
+        <LoginButton/>
+    </AuthDiv>
+      
     </Header2Div>
   );
 }
