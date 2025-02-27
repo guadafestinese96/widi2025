@@ -16,7 +16,7 @@ const Header2Div = styled.div`
     box-shadow: 0px 3px 20px rgba(0,0,0,0.1);
 `
 const ImgHeader2 = styled.img`
-width:50px;
+    width:50px;
 `
 export default function Header2(){
     return(
