@@ -75,9 +75,8 @@ export default function Header2() {
       </InputBoxContainer>
 
     <AuthDiv>
-        {isAuthenticated ? <Logout/> : <LoginButton/>}
-        
         <ProfileUser/>
+        {isAuthenticated ? <Logout/> : <LoginButton/>}      
     </AuthDiv>
       
     </Header2Div>

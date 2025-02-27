@@ -30,7 +30,6 @@ export default function Inicio() {
   }, []);
 
   const { search, searchedProducts } = useContext(SearchContext);
-  const {isAuthenticated} = useAuth0();
 
   return (
     <div className="inicioContainer">
