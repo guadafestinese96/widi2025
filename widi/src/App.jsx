@@ -9,7 +9,7 @@ import VerTodosPerfumes from "./components/verTodos/VerTodosPerfumes.jsx";
 import CartList from "./components/cart/CartList.jsx";
 
 
-function App() {
+export default function App(){
   return (
     <BrowserRouter>
       <SearchProvider>
@@ -24,8 +24,8 @@ function App() {
           </Layout>
         </CartProvider>
       </SearchProvider>
-    </BrowserRouter>
+      </BrowserRouter>
   );
 }
 
-export default App;
+
