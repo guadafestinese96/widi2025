@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Header2Div = styled.div`
@@ -21,7 +22,9 @@ export default function Header2(){
     return(
         <Header2Div className="header">
             dfsdfdslfdslf
+            <NavLink to='/'>
             <ImgHeader2 src='/images/widiLogoRedondo.png' alt='widilogo'/>
+            </NavLink>
         </Header2Div>
     )
 }
