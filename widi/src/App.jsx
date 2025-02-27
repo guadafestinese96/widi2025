@@ -8,8 +8,6 @@ import ContactForm from "./components/formulario/ContactForm";
 import VerTodosPerfumes from "./components/verTodos/VerTodosPerfumes.jsx";
 import CartList from "./components/cart/CartList.jsx";
 
-const domain = "dev-7cmkqcbih4h2hfid.us.auth0.com";
-const clientId = "ydFRqL0ECs16TSeLwFmmScPSrVC97q3S";
 
 function App() {
   return (

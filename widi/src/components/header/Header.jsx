@@ -1,20 +1,13 @@
-import {
-  BarChart,
-  Login,
-  Person2Rounded,
-  SearchRounded,
-  ShoppingCartRounded,
-  VerifiedUserRounded,
-} from "@mui/icons-material";
 import "./Header.css";
-import widiLogo from "../../../public/images/widiLogoRedondo.png";
+import {
+  SearchRounded,
+} from "@mui/icons-material";
+
+
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import SearchContext from "../context/SearchContext";
-import { useAuth0 } from "@auth0/auth0-react";
-import LoginButton from "../login/LoginButton";
-import ProfileUser from "../login/ProfileUser";
-import Logout from "../login/Logout";
+
 
 export default function Header() {
  
@@ -23,9 +16,9 @@ export default function Header() {
 
   return (
     <div className="headerContainer">
-      <NavLink to={"/"}>
+      {/* <NavLink to={"/"}>
         <img src={widiLogo} alt="logo" className="logo" />
-      </NavLink>
+      </NavLink> */}
       <div className="inputBox">
         <SearchRounded className="searchIcon" />
         <input
@@ -48,6 +41,12 @@ export default function Header() {
   );
 }
 
+/*
+import { useAuth0 } from "@auth0/auth0-react";
+import LoginButton from "../login/LoginButton";
+import ProfileUser from "../login/ProfileUser";
+import Logout from "../login/Logout";
+*/
 // const {isAuthenticated} = useAuth0();
 
     /* <div className="loginHeaderContainer">
