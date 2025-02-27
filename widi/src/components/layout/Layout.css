@@ -1,4 +1,9 @@
-
+.bodyLayout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .bodyLayout .childrenContainer{
     display: flex;
     margin-top: 130px;

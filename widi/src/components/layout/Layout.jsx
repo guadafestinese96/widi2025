@@ -5,8 +5,13 @@ import "./Layout.css";
 export default function Layout({ children }) {
   return (
     <div className="bodyLayout">
-      <Header /> 
-      <Footer />
+      <div>
+        <Header /> 
+      </div>
+      <div>
+        <Footer />
+      </div>
+      
       <div className="childrenContainer">{children}</div>
     </div>
   );
