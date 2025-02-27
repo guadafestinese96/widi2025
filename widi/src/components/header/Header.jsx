@@ -1,6 +1,6 @@
 import "./Header.css"
 
-import {SearchRounded }from "@mui/icons-material";
+
 import widiLogo from '../../../public/images/widiLogoRedondo.png'
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
@@ -18,7 +18,7 @@ export default function Header() {
         <img src={widiLogo} alt="logo" className="logo" />
       </NavLink> 
       <div className="inputBox">
-        <SearchRounded className="searchIcon" />
+        
         <input
           type="text"
           placeholder="Buscar"
