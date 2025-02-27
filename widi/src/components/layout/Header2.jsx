@@ -21,6 +21,18 @@ const Header2Div = styled.div`
 const ImgHeader2 = styled.img`
   width: 50px;
 `;
+
+const InputBoxContainer = styled.div`
+background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 3px 20px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 5px 15px;
+    width: 150px;
+`
 export default function Header2() {
   const { search, setSearch } = useContext(SearchContext);
 
@@ -29,7 +41,7 @@ export default function Header2() {
       <NavLink to="/">
         <ImgHeader2 src="/images/widiLogoRedondo.png" alt="widilogo" />
       </NavLink>
-      <div className="inputBox">
+      <InputBoxContainer>
         <SearchRounded/>
         <input
           type="text"
@@ -40,7 +52,7 @@ export default function Header2() {
             console.log(search);
           }}
         />
-      </div>
+      </InputBoxContainer>
     </Header2Div>
   );
 }
