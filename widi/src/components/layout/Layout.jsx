@@ -5,7 +5,7 @@ import "./Layout.css";
 export default function Layout({ children }) {
   return (
     <div className="bodyLayout">
-      {/* <Header /> */}
+      <Header /> 
       <Footer />
       <div className="childrenContainer">{children}</div>
     </div>

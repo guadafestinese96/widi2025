@@ -33,12 +33,7 @@ export default function Header() {
         />
       </div>
 
-      <div className="loginHeaderContainer">
-        {isAuthenticated ? <ProfileUser/> :
-        <div className="imgLoginHeaderContainer">
-           <Person2Rounded className="imgLoginHeader" /> 
-           </div>}
-          
+      <div className="loginHeaderContainer">          
        
         {isAuthenticated ? <Logout/> :<LoginButton/> }
         
