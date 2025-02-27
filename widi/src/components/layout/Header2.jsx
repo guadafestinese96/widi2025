@@ -33,6 +33,18 @@ background-color: white;
     padding: 5px 15px;
     width: 150px;
 `
+
+const InputSearch = styled.input`
+ width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: black;
+    padding-left: 8px;
+    font-size: 15px;
+`
+
 export default function Header2() {
   const { search, setSearch } = useContext(SearchContext);
 
@@ -43,7 +55,7 @@ export default function Header2() {
       </NavLink>
       <InputBoxContainer>
         <SearchRounded/>
-        <input
+        <InputSearch
           type="text"
           placeholder="Buscar"
           className="inputSearch"
