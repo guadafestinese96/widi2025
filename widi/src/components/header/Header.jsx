@@ -1,7 +1,6 @@
 import "./Header.css"
 
-import SearchRounded from "@mui/icons-material";
-import Person2Rounded from "@mui/icons-material";
+import {SearchRounded, Person2Rounded }from "@mui/icons-material";
 import widiLogo from '../../../public/images/widiLogoRedondo.png'
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
