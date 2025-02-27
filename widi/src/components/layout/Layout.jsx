@@ -6,7 +6,7 @@ import "./Layout.css";
 export default function Layout({ children }) {
   return (
     <div className="bodyLayout">
-   <Header/>
+   <Header2/>
  
      <Footer/>
       
