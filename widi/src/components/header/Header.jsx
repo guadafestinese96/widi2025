@@ -1,7 +1,5 @@
 import "./Header.css"
 
-
-import widiLogo from '../../../public/images/widiLogoRedondo.png'
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import SearchContext from "../context/SearchContext";
@@ -15,7 +13,7 @@ export default function Header() {
   return (
     <div className="headerContainer">
        <NavLink to={"/"}>
-        <img src={widiLogo} alt="logo" className="logo" />
+        <img src="/images/widiLogoRedondo.png" alt="logo" className="logo" />
       </NavLink> 
       <div className="inputBox">
         
