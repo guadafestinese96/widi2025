@@ -4,6 +4,8 @@ import { useContext } from "react";
 import SearchContext from "../context/SearchContext";
 import { SearchRounded } from "@mui/icons-material";
 import LoginButton from "../login/LoginButton";
+import { useAuth0 } from "@auth0/auth0-react";
+import ProfileUser from "../login/ProfileUser";
 
 const Header2Div = styled.div`
   display: flex;
@@ -51,6 +53,7 @@ const AuthDiv = styled.div`
 
 export default function Header2() {
   const { search, setSearch } = useContext(SearchContext);
+    const {isAuthenticated} = useAuth0();
 
   return (
     <Header2Div className="header">
@@ -72,6 +75,7 @@ export default function Header2() {
 
     <AuthDiv>
         <LoginButton/>
+        <ProfileUser/>
     </AuthDiv>
       
     </Header2Div>
