@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { useContext } from "react";
 import SearchContext from "../context/SearchContext";
+import { SearchRounded } from "@mui/icons-material";
 
 const Header2Div = styled.div`
   display: flex;
@@ -29,6 +30,7 @@ export default function Header2() {
         <ImgHeader2 src="/images/widiLogoRedondo.png" alt="widilogo" />
       </NavLink>
       <div className="inputBox">
+        <SearchRounded/>
         <input
           type="text"
           placeholder="Buscar"
