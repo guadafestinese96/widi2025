@@ -1,17 +1,22 @@
-import "./Header.css";
+import "./Header.css"
+
 import {
   SearchRounded,
+  Person2Rounded
 } from "@mui/icons-material";
 import widiLogo from '../../../public/images/widiLogoRedondo.png'
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import SearchContext from "../context/SearchContext";
-
+import { useAuth0 } from "@auth0/auth0-react";
+import LoginButton from "../login/LoginButton";
+import ProfileUser from "../login/ProfileUser";
+import Logout from "../login/Logout";
 
 export default function Header() {
  
   const { search, setSearch } = useContext(SearchContext);
-  
+  const {isAuthenticated} = useAuth0();
 
   return (
     <div className="headerContainer">
@@ -31,24 +36,7 @@ export default function Header() {
         />
       </div>
 
-     
-
-  
-
-      
-    </div>
-  );
-}
-
-/*
-import { useAuth0 } from "@auth0/auth0-react";
-import LoginButton from "../login/LoginButton";
-import ProfileUser from "../login/ProfileUser";
-import Logout from "../login/Logout";
-*/
-// const {isAuthenticated} = useAuth0();
-
-    /* <div className="loginHeaderContainer">
+      <div className="loginHeaderContainer">
         {isAuthenticated ? <ProfileUser/> :
         <div className="imgLoginHeaderContainer">
            <Person2Rounded className="imgLoginHeader" /> 
@@ -57,4 +45,11 @@ import Logout from "../login/Logout";
        
         {isAuthenticated ? <Logout/> :<LoginButton/> }
         
-      </div> */
+      </div>
+
+  
+
+      
+    </div>
+  );
+}
