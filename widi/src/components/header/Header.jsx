@@ -19,7 +19,7 @@ import Logout from "../login/Logout";
 export default function Header() {
  
   const { search, setSearch } = useContext(SearchContext);
-  // const {isAuthenticated} = useAuth0();
+  
 
   return (
     <div className="headerContainer">
@@ -41,7 +41,16 @@ export default function Header() {
 
      
 
-      {/* <div className="loginHeaderContainer">
+  
+
+      
+    </div>
+  );
+}
+
+// const {isAuthenticated} = useAuth0();
+
+    /* <div className="loginHeaderContainer">
         {isAuthenticated ? <ProfileUser/> :
         <div className="imgLoginHeaderContainer">
            <Person2Rounded className="imgLoginHeader" /> 
@@ -50,10 +59,4 @@ export default function Header() {
        
         {isAuthenticated ? <Logout/> :<LoginButton/> }
         
-      </div> */}
-
-      
-    </div>
-  );
-}
-
+      </div> */
