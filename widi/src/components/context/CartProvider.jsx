@@ -14,7 +14,8 @@ export default function CartProvider({ children }) {
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
+    localStorage.setItem("favoritos", JSON.stringify(favoritos));
+  }, [[cart], [favoritos]]);
 
   const addToFavoritos = (perfume) => {
     const itemInFavoritos =
@@ -24,14 +25,14 @@ export default function CartProvider({ children }) {
       return "";
     } else {
       setFavoritos([...favoritos, perfume]);
-      localStorage.setItem("favoritos", JSON.stringify(favoritos));
+      
     }
   };
 
   const deleteFromFavoritos = (perfume) =>{
     const newFav = favoritos.filter(item => item.id != perfume.id)
     setFavoritos(newFav)
-    localStorage.setItem("favoritos", JSON.stringify(favoritos));
+   
   }
 
   console.log(favoritos);
