@@ -12,7 +12,7 @@ export default function CartList() {
   return (
     <div className="cartListContainer">
       {cart.map((perfume) => ( 
-          <CartItem perfume={perfume} />
+          <CartItem perfume={perfume} key={perfume.id}/>
       ))}
       {cart.length > 0 ? (
           <div className="footerCarrito">

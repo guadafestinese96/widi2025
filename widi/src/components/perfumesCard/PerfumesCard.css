@@ -75,3 +75,7 @@ font-size: 8px;
 .btnFavoritos ~ .adedToFav{
     color: var(--colorPrimario);
 }
+
+.addedToFav{
+    color: var(--colorPrimario);
+}

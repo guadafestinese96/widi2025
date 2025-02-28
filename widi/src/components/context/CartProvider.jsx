@@ -1,18 +1,40 @@
 import { useEffect, useState } from "react";
 import CartContext from "./CartContext";
 
-
 export default function CartProvider({ children }) {
-
- 
   const [cart, setCart] = useState(
     localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : []
+  );
+
+  const [favoritos, setFavoritos] = useState(
+    localStorage.getItem("favoritos")
+      ? JSON.parse(localStorage.getItem("favoritos"))
+      : []
   );
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
+  const addToFavoritos = (perfume) => {
+    const itemInFavoritos =
+      favoritos.length > 0 && favoritos.find((item) => item.id === perfume.id);
+
+    if (itemInFavoritos) {
+      return "";
+    } else {
+      setFavoritos([...favoritos, perfume]);
+      localStorage.setItem("favoritos", JSON.stringify(favoritos));
+    }
+  };
+
+  const deleteFromFavoritos = (perfume) =>{
+    const newFav = favoritos.filter(item => item.id != perfume.id)
+    setFavoritos(newFav)
+    localStorage.setItem("favoritos", JSON.stringify(favoritos));
+  }
+
+  console.log(favoritos);
 
   const addToCart = (perfume) => {
     setCart((carritoAnterior) => {
@@ -30,8 +52,6 @@ export default function CartProvider({ children }) {
       }
     });
   };
-
-
 
   const removeFromCart = (item) => {
     const newCart = cart.filter((itemBuscado) => itemBuscado.id != item.id);
@@ -68,9 +88,6 @@ export default function CartProvider({ children }) {
     return acumulador + item.quantity * item.precio;
   }, 0);
 
-  
-
-
   return (
     <CartContext.Provider
       value={{
@@ -81,7 +98,10 @@ export default function CartProvider({ children }) {
         incrementQuantity,
         decrementQuantity,
         totalPrecioCarrito,
-        formatNumber
+        formatNumber,
+        favoritos,
+        addToFavoritos,
+        deleteFromFavoritos
       }}
     >
       {children}

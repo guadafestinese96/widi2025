@@ -7,6 +7,7 @@ import SearchProvider from "./components/context/SearchProvider";
 import ContactForm from "./components/formulario/ContactForm";
 import VerTodosPerfumes from "./components/verTodos/VerTodosPerfumes.jsx";
 import CartList from "./components/cart/CartList.jsx";
+import Favoritos from "./components/favoritos/Favoritos.jsx";
 
 
 export default function App(){
@@ -20,6 +21,7 @@ export default function App(){
               <Route path="/contact" element={<ContactForm />} />
               <Route path="/vertodos" element={<VerTodosPerfumes />} />
               <Route path="/carrito" element={<CartList />} />
+              <Route path="/favoritos" element={<Favoritos/>}/>
             </Routes>
           </Layout>
         </CartProvider>

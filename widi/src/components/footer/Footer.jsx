@@ -24,7 +24,7 @@ export default function Footer() {
         <IconsFooterContainer link={"/"} icon={<HomeRounded />} />
         <IconsFooterContainer link={"/vertodos"} icon={<MenuRounded />} />
         <IconsFooterContainer link={"/carrito"} icon={<ShoppingCartRounded className="cartIcon"/>} label={cart.length} />
-        <IconsFooterContainer link={"#"} icon={<Favorite />} />
+        <IconsFooterContainer link={"/favoritos"} icon={<Favorite />} />
         <IconsFooterContainer link={"/contact"} icon={<EmailRounded />} />
    
 

@@ -8,9 +8,12 @@ import { useContext, useState } from "react";
 import CartContext from "../context/CartContext";
 
 export default function PerfumesCard({ perfume }) {
-  const { cart, addToCart } = useContext(CartContext);
+  const { cart, addToCart, favoritos, addToFavoritos } = useContext(CartContext);
 
   const isItemInCart = cart.find((item) => item.id === perfume.id);
+
+  
+  const isItemInFav = favoritos.find(item=> item.id === perfume.id)
 
   return (
     <div className="cardContainer">
@@ -28,6 +31,9 @@ export default function PerfumesCard({ perfume }) {
             <AddShoppingCartRounded />
           </button>
         )}
+        <button className="btnFavoritos" onClick={()=>addToFavoritos(perfume)}>
+          <FavoriteRounded className={isItemInFav ? "addedToFav": ""}/>
+        </button>
       </div>
     </div>
   );
