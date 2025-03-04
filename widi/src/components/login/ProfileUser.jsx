@@ -1,6 +1,4 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import "./Login.css";
-import Logout from "./Logout";
 import { Person2Rounded } from "@mui/icons-material";
 import styled from "styled-components";
 
