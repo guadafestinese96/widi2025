@@ -1,4 +1,3 @@
-import './RedesContainer.css'
 import { NavLink } from 'react-router-dom'
 import { Instagram, WhatsApp } from '@mui/icons-material'
 import styled from 'styled-components'

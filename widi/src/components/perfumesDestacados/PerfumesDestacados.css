@@ -29,23 +29,3 @@
 }
 
 /*-----------------------------*/
-.destacadosContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-
-}
-
-.destacadosContainer h1{
-    font-size: 20px;
-    text-align: center;
-    color: var(--colorPrimario);
-}
-
-.perfumesDestacadosContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
