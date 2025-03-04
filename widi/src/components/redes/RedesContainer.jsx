@@ -53,7 +53,7 @@ export default function RedesContainer(){
             <IgWp>
               <Instagram />
             </IgWp>
-            <p>@widistoreok__</p>
+            <IgWpP>@widistoreok__</IgWpP>
           </IgWpContainer>
         </NavLink>
 
@@ -62,7 +62,7 @@ export default function RedesContainer(){
             <IgWp>
               <WhatsApp />
             </IgWp>
-            <p>+549 1161950112</p>
+            <IgWpP>+549 1161950112</IgWpP>
           </IgWpContainer>
         </NavLink>
       </RedesContainerDiv>
