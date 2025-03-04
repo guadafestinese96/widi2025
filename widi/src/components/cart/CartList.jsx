@@ -15,8 +15,8 @@ const DestacadosH1 = styled.h1`
 export default function CartList() {
   const { cart, formatNumber, clearCart, totalPrecioCarrito } =
     useContext(CartContext);
-  console.log(cart.length);
-  console.log(cart);
+
+  
 
   return (
     <div className="cartListContainer">
