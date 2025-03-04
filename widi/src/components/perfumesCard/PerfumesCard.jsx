@@ -59,11 +59,13 @@ const AddToCart = styled.button`
 background-color: var(--colorSecundario);
   border: none;
   cursor: pointer;
+  color: var(--colorPrimario);
 `
 const AddedToCart = styled.button`
 background-color: var(--colorSecundario);
   border: none;
   cursor: pointer;
+  color: var(--colorPrimario);
 `
 
 
