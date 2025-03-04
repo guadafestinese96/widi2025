@@ -119,15 +119,17 @@
     margin: 5px;
     
 }
+.buttonsFooterCart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    width: 100vw;
+    padding: 0 30px 0 30px;
+}
 
 .btnBorrarCarrito:hover, .btnFinalizarCompra:hover{
     background-color: black;
     color: var(--colorPrimario);
 }
 
-.buttonsFooterCart{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
