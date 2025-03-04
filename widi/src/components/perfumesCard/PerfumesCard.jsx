@@ -90,6 +90,8 @@ background-color: var(--colorSecundario);
 
 const AddedToFav = styled.button`
 color: var(--colorPrimario);
+background-color: var(--colorSecundario);
+border:none;
 `
 
 
