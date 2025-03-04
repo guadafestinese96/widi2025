@@ -17,12 +17,11 @@ const ChildrenContainer = styled.div`
     justify-content: center;
     align-items: center;   
     padding-bottom: 80px;
-
 `
 export default function Layout({ children }) {
   return (
     <BodyLayout>
-
+      <Header2/>
       <Footer/>
       
       <ChildrenContainer>{children}</ChildrenContainer>
