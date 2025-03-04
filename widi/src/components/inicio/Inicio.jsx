@@ -46,10 +46,7 @@ export default function Inicio() {
 
       <VerTodos />
 
-      <Instagram />
-      <WhatsApp />
-     
-
+      
     </div>
   );
 }
