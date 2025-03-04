@@ -8,6 +8,7 @@ const SelectContainer = styled.div`
 width: 100vw;
   display: flex;
   justify-content: left;
+  color:black;
 `
 
 const SelectLabel = styled.label`

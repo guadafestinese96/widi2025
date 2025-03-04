@@ -96,7 +96,7 @@ export default function PerfumesCard({ perfume }) {
           </AddToCart>
         )}
         <BtnFavoritos className="btnFavoritos" onClick={()=>addToFavoritos(perfume)}>
-          {isItemInFav ? <AddedToFav><FavoriteRounded/></AddedToFav> : <FavoriteRounded/>}
+          {isItemInFav ? <AddedToFav><FavoriteRounded /></AddedToFav> : <FavoriteRounded style={{color: "black"}}/>}
           
         </BtnFavoritos>
       </ButtonsPerfumesCard>
