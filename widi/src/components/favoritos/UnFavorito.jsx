@@ -69,7 +69,7 @@ export default function UnFavorito({ perfume }) {
 
         <ButtonsPerfumesCard>
           <BtnFavoritos className="btnFavoritos" onClick={()=>deleteFromFavoritos(perfume)}>
-            <DeleteRounded />
+            <DeleteRounded style={{color: "#ff13a7"}}/>
           </BtnFavoritos>
         </ButtonsPerfumesCard>
       </CardContainer>
