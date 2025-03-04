@@ -1,7 +1,6 @@
 import Footer from "../footer/Footer";
 import RedesContainer from "../redes/RedesContainer";
-import Header2 from "./Header2";
-import "./Layout.css";
+import Header2 from "../header/Header2";
 import styled from "styled-components";
 
 const BodyLayout = styled.div`

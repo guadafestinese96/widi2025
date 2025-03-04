@@ -3,7 +3,6 @@ import {
   CheckRounded,
   FavoriteRounded,
 } from "@mui/icons-material";
-import "./PerfumesCard.css";
 import { useContext, useState } from "react";
 import CartContext from "../context/CartContext";
 import styled from "styled-components";
@@ -68,33 +67,11 @@ background-color: var(--colorSecundario);
   color: var(--colorPrimario);
 `
 
-
-// .cardContainer .addToCart .MuiSvgIcon-root, 
-// .cardContainer .addedToCart .MuiSvgIcon-root{
-//   color: var(--colorPrimario);
-// }
-
-
-// .cardContainer .MuiSvgIcon-root {
-//   width: 20px;
-//   margin-top: 5px;
-// }
-
-
-
-
-
-// .btnFavoritos ~ .adedToFav{
-//   color: var(--colorPrimario);
-// }
-
 const AddedToFav = styled.button`
 color: var(--colorPrimario);
 background-color: var(--colorSecundario);
 border:none;
 `
-
-
 
 
 export default function PerfumesCard({ perfume }) {

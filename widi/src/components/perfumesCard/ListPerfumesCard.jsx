@@ -1,6 +1,4 @@
 import PerfumesCard from "./PerfumesCard";
-import "./PerfumesCard.css";
-import { useState } from "react";
 import styled from "styled-components";
 
 const ListContainerCard = styled.div`
