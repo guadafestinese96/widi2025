@@ -58,7 +58,7 @@ export default function RedesContainer(){
           </IgWpContainer>
         </NavLink>
 
-        <NavLink to="https://api.whatsapp.com/send/?phone=1161950112&text&type=phone_number&app_absent=0" target="_blank" text={mensaje}>
+        <NavLink to={`https://api.whatsapp.com/send/?phone=1161950112&text&type=phone_number&app_absent=0"?text=${mensaje}`} target="_blank" >
           <IgWpContainer>
             <IgWp>
               <WhatsApp />
