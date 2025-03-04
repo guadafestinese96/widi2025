@@ -46,7 +46,7 @@ font-size: 12px;
 `
 export default function RedesContainer(){
     const mensaje = encodeURIComponent("hola");
-
+    const phoneNumber = "5491161950112";
     return(
         <RedesContainerDiv>
         <NavLink to="https://www.instagram.com/widistoreok__" target="_blank">
@@ -58,7 +58,7 @@ export default function RedesContainer(){
           </IgWpContainer>
         </NavLink>
 
-        <NavLink to={`https://api.whatsapp.com/send/?phone=1161950112&text&type=phone_number&app_absent=0"?text=${mensaje}`} target="_blank" >
+        <NavLink to={`https://wa.me/${phoneNumber}?text=${mensaje}`} target="_blank" rel="noopener noreferrer">
           <IgWpContainer>
             <IgWp>
               <WhatsApp />
