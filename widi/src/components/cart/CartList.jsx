@@ -17,11 +17,14 @@ export default function CartList() {
       {cart.length > 0 ? (
           <div className="footerCarrito">
             <p>Total: $ {formatNumber(totalPrecioCarrito)} </p>
-            <button onClick={() => clearCart()} className="btnBorrarCarrito">
+            <div className="buttonsFooterCart">
+              <button onClick={() => clearCart()} className="btnBorrarCarrito">
               {" "}
               Borrar carrito <DeleteForeverOutlined/>
             </button>
             <button className="btnFinalizarCompra">Finalizar compra <CheckRounded/></button>
+            </div>
+            
           </div>
         ) : (
           <div>No hay productos en el carrito</div>

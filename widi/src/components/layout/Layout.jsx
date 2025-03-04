@@ -11,7 +11,7 @@ const BodyLayout = styled.div`
 `
 const ChildrenContainer = styled.div`
     display: flex;
-    margin-top: 130px;
+    margin-top: 140px;
     padding: 20px;
     justify-content: center;
     align-items: center;   
