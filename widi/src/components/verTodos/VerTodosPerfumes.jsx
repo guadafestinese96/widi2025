@@ -17,7 +17,7 @@ margin-left: 10px;
 const SelectGender = styled.select`
 font-family: "Poppins";
   padding: 5px;
-  border: none;
+  border: 1px solid var(--colorPrimario);
   background-color: var(--colorPrimario);
   border-radius: 10px;
   margin-bottom: 10px;
@@ -25,6 +25,7 @@ font-family: "Poppins";
   justify-content: center;
   align-items: center;
   margin-left: 10px;
+  color:black;
 `
 
 
@@ -56,7 +57,7 @@ export default function VerTodosPerfumes() {
             setSelect(e.target.value);
           }}
         >
-          <option value="all" className="optionSelect">TODOS</option>
+          <option value="all" className="optionSelect" style={{color: "black"}}>TODOS</option>
           <option value="femenino" className="optionSelect">Femenino</option>
           <option value="masculino" className="optionSelect">Masculino</option>
           <option value="unisex" className="optionSelect">Unisex</option>
