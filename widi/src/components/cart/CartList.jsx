@@ -4,6 +4,7 @@ import CartContext from "../context/CartContext";
 import "./Cart.css";
 import { CheckRounded, DeleteForeverOutlined } from "@mui/icons-material";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const DestacadosH1 = styled.h1`
   font-size: 18px;
