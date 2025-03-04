@@ -1,9 +1,19 @@
 import ListPerfumesCard from "../perfumesCard/ListPerfumesCard";
-import "./Inicio.css";
 import { useContext, useEffect } from "react";
 import VerTodos from "../verTodos/VerTodos.jsx";
 import SearchContext from "../context/SearchContext.jsx";
 import PerfumesDestacados from "../perfumesDestacados/PerfumesDestacados.jsx";
+import styled from "styled-components";
+
+const TitleIndex = styled.h1`
+font-family: "Qwitcher Grypen", cursive;    
+      text-transform: lowercase;
+      text-shadow: #ff13a7 5px 2px 5px;
+      font-size: 80px;
+      font-weight: 500;
+      text-align: center;
+`
+
 
 
 export default function Inicio() {
@@ -23,7 +33,7 @@ export default function Inicio() {
 
   return (
     <div className="inicioContainer">
-      <h1 className="titleIndex">Widi Store</h1>
+      <TitleIndex>Widi Store</TitleIndex>
       
       {search.length > 0 ? (
         searchedProducts.length > 0 ? (
