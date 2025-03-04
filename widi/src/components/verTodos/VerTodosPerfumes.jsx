@@ -28,7 +28,12 @@ font-family: "Poppins";
   color:black;
 `
 
-
+const DestacadosH1 = styled.h1`
+    font-size: 18px;
+    text-align: center;
+    color: var(--colorPrimario);
+    margin-bottom: 20px;
+`
 
 
 export default function VerTodosPerfumes() {
@@ -47,6 +52,7 @@ export default function VerTodosPerfumes() {
 
   return (
     <div className="div">
+      <DestacadosH1>Fragancias</DestacadosH1>
       <SelectContainer>
         <SelectLabel htmlFor="filterByGender">GENERO: </SelectLabel>
         <SelectGender

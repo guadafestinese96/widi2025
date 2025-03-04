@@ -1,5 +1,7 @@
 import {
     DeleteRounded,
+    AddShoppingCartRounded,
+    CheckRounded
   } from "@mui/icons-material";
 
 import { useContext } from "react";
@@ -51,13 +53,29 @@ const ButtonsPerfumesCard = styled.div`
 display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top:5px;
+`
+const AddToCart = styled.button`
+background-color: var(--colorSecundario);
+  border: none;
+  cursor: pointer;
+  color: var(--colorPrimario);
+
+  &:hover{
+  color:black;
+  }
+`
+const AddedToCart = styled.button`
+background-color: var(--colorSecundario);
+  border: none;
+  cursor: pointer;
+  color: var(--colorPrimario);
 `
 
 
-
-
 export default function UnFavorito({ perfume }) {
-    const {deleteFromFavoritos} = useContext(CartContext);
+    const {deleteFromFavoritos, addToCart, cart} = useContext(CartContext);
+    const isItemInCart = cart.find((item) => item.id === perfume.id);
 
 
     return (
@@ -68,9 +86,23 @@ export default function UnFavorito({ perfume }) {
         <CardP>${perfume.precio}</CardP>
 
         <ButtonsPerfumesCard>
+
+          {isItemInCart ? (
+                    <AddedToCart className="addedToCart">
+                      <CheckRounded />
+                    </AddedToCart>
+                  ) : (
+                    <AddToCart className="addToCart" onClick={() => addToCart(perfume)}>
+                      <AddShoppingCartRounded />
+                    </AddToCart>
+                  )}
+
           <BtnFavoritos className="btnFavoritos" onClick={()=>deleteFromFavoritos(perfume)}>
             <DeleteRounded style={{color: "#ff13a7"}}/>
           </BtnFavoritos>
+
+          
+
         </ButtonsPerfumesCard>
       </CardContainer>
     );

@@ -52,6 +52,7 @@ const ButtonsPerfumesCard = styled.div`
 display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top:5px;
 `
 
 const AddToCart = styled.button`
@@ -59,6 +60,9 @@ background-color: var(--colorSecundario);
   border: none;
   cursor: pointer;
   color: var(--colorPrimario);
+  &:hover{
+  color:black;
+  }
 `
 const AddedToCart = styled.button`
 background-color: var(--colorSecundario);

@@ -1,34 +1,47 @@
 import CartItem from "./CartItem";
 import { useContext } from "react";
 import CartContext from "../context/CartContext";
-import './Cart.css'
-import { CheckRounded, ClearAllRounded, DeleteForeverOutlined, DeleteForeverRounded, DeleteOutlineRounded } from "@mui/icons-material";
+import "./Cart.css";
+import { CheckRounded, DeleteForeverOutlined } from "@mui/icons-material";
+import styled from "styled-components";
+
+const DestacadosH1 = styled.h1`
+  font-size: 18px;
+  text-align: center;
+  color: var(--colorPrimario);
+  margin-bottom: 20px;
+`;
 
 export default function CartList() {
-  const { cart, formatNumber, clearCart, totalPrecioCarrito } = useContext(CartContext);
+  const { cart, formatNumber, clearCart, totalPrecioCarrito } =
+    useContext(CartContext);
   console.log(cart.length);
   console.log(cart);
 
   return (
     <div className="cartListContainer">
-      {cart.map((perfume) => ( 
-          <CartItem perfume={perfume} key={perfume.id}/>
-      ))}
       {cart.length > 0 ? (
+        <div>
+          <DestacadosH1>Carrito</DestacadosH1>
+          {cart.map((perfume) => (
+            <CartItem perfume={perfume} key={perfume.id} />
+          ))}
           <div className="footerCarrito">
             <p>Total: $ {formatNumber(totalPrecioCarrito)} </p>
             <div className="buttonsFooterCart">
               <button onClick={() => clearCart()} className="btnBorrarCarrito">
-              {" "}
-              Borrar carrito <DeleteForeverOutlined/>
-            </button>
-            <button className="btnFinalizarCompra">Finalizar compra <CheckRounded/></button>
+                {" "}
+                Borrar carrito <DeleteForeverOutlined />
+              </button>
+              <button className="btnFinalizarCompra">
+                Finalizar compra <CheckRounded />
+              </button>
             </div>
-            
           </div>
-        ) : (
-          <div>No hay productos en el carrito</div>
-        )}
+        </div>
+      ) : (
+        <div>No hay productos en el carrito</div>
+      )}
     </div>
   );
 }
