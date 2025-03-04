@@ -76,7 +76,13 @@ font-size: 15px;
 
 */
 
-
+const MensajeRespuestaContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items:center;
+flex-direction: column;
+margin-top: 80px;
+`
 
 
 export default function ContactForm() {
@@ -85,10 +91,10 @@ export default function ContactForm() {
 
   if (state.succeeded) {
     return (
-        <div>
+        <MensajeRespuestaContainer>
             <MensajeRespusta>¡ Gracias por tu consulta <strong>{nombre.toUpperCase()}</strong> !</MensajeRespusta>
              <MensajeRespusta>Te estaremos respondiendo a la brevedad.</MensajeRespusta>
-        </div>
+        </MensajeRespuestaContainer>
       
     );
   }
