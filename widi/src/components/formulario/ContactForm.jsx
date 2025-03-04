@@ -81,7 +81,9 @@ display: flex;
 justify-content: center;
 align-items:center;
 flex-direction: column;
-margin-top: 80px;
+margin-top: 100px;
+heigth: 100vh;
+
 `
 
 
