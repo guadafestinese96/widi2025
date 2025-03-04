@@ -15,7 +15,8 @@ display: flex;
 const PerfumeDestacadoImg = styled.img`
  width: 100px;
     height: 80px;
-    filter: drop-shadow(5px 5px 20px white);
+    filter: drop-shadow(5px 5px 20px black);
+    background-color: unset;
 `
 
 const PerfumeDestacadoH3 = styled.h3`
