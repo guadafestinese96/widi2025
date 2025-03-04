@@ -28,6 +28,11 @@ padding: 5px;
 
 const InputNombre = styled.input`
 text-transform: capitalize;
+padding: 5px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  font-family: "Poppins";
 `
 
 const TextArea = styled.textarea`
@@ -88,14 +93,14 @@ export default function ContactForm() {
   return (
     <ContactFormContainer onSubmit={handleSubmit} className="contactForm">
       <LabelForm htmlFor="nombre" className="labelNombre">Nombre:</LabelForm>
-      <input id="nombre" type="text" name="nombre" className="inputNombre" required 
+      <InputNombre id="nombre" type="text" name="nombre" className="inputNombre" required 
         onChange={(e)=>{
             setNombre(e.target.value)
         }}
       />
 
       <LabelForm htmlFor="whatsapp">Whatsapp:</LabelForm>
-      <InputNombre id="whatsapp" type="number" name="nombre" className="inputWhatsapp" required/>
+      <InputForm id="whatsapp" type="number" name="nombre" className="inputWhatsapp" required/>
 
       <LabelForm htmlFor="email">Email:</LabelForm>
       <InputForm id="email" type="email" name="email" required/>
