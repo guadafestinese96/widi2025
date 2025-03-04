@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { useContext } from "react";
 import SearchContext from "../context/SearchContext";
@@ -27,42 +26,41 @@ const ImgHeader2 = styled.img`
 `;
 
 const InputBoxContainer = styled.div`
-background-color: white;
-    border-radius: 25px;
-    box-shadow: 0px 3px 20px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    padding: 5px 15px;
-    width: 150px;
-`
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 5px 15px;
+  width: 150px;
+`;
 
 const InputSearch = styled.input`
- width: 100%;
-    height: 100%;
-    outline: none;
-    border: none;
-    background: transparent;
-    color: black;
-    padding-left: 8px;
-    font-size: 15px;
-`
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: black;
+  padding-left: 8px;
+  font-size: 15px;
+`;
 const AuthDiv = styled.div`
-    display: flex;
-`
+  display: flex;
+`;
 
 export default function Header2() {
   const { search, setSearch } = useContext(SearchContext);
-    const {isAuthenticated} = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
   return (
     <Header2Div className="header">
-      <NavLink to="/">
-        <ImgHeader2 src="/images/widiLogoRedondo.png" alt="widilogo" />
-      </NavLink>
+      <ImgHeader2 src="/images/widiLogoRedondo.png" alt="widilogo" />
+
       <InputBoxContainer>
-        <SearchRounded/>
+        <SearchRounded />
         <InputSearch
           type="text"
           placeholder="Buscar"
@@ -74,11 +72,10 @@ export default function Header2() {
         />
       </InputBoxContainer>
 
-    <AuthDiv>
-        <ProfileUser/>
-        {isAuthenticated ? <Logout/> : <LoginButton/>}      
-    </AuthDiv>
-      
+      <AuthDiv>
+        <ProfileUser />
+        {isAuthenticated ? <Logout /> : <LoginButton />}
+      </AuthDiv>
     </Header2Div>
   );
 }
