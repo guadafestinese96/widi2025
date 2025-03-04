@@ -1,14 +1,30 @@
 import { ChevronRightRounded } from "@mui/icons-material";
-import "./VerTodos.css";
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+
+const VerTodosContainer = styled.div`
+  display: flex;
+  justify-content: end;
+  font-size: 12px;
+  align-items: center;
+  color: black;
+`;
+const MuiSvgIconRoot = styled.div`
+  color: var(--colorPrimario);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 export default function VerTodos() {
   return (
     <NavLink to={"/vertodos"}>
-      <div className="verTodosContainer">
+      <VerTodosContainer>
         <p>Ver Todos</p>
-        <ChevronRightRounded />
-      </div>
+        <MuiSvgIconRoot>
+          <ChevronRightRounded />
+        </MuiSvgIconRoot>
+      </VerTodosContainer>
     </NavLink>
   );
 }

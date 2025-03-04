@@ -1,4 +1,3 @@
-import './PerfumesDestacados.css'
 import perfumes from "../perfumes.js";
 import PerfumeDestacadoCard from './PerfumeDestacadoCard.jsx';
 import styled from 'styled-components';

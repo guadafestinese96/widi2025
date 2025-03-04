@@ -1,4 +1,3 @@
-import './PerfumesDestacados.css'
 import styled from 'styled-components'
 
 const PerfumeDestacadoContainer = styled.div`
