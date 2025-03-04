@@ -10,7 +10,7 @@ display: flex;
     flex-direction: column;
 `
 const DestacadosH1 = styled.h1`
- font-size: 20px;
+    font-size: 18px;
     text-align: center;
     color: var(--colorPrimario);
 `

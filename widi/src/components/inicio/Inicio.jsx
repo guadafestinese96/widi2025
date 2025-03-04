@@ -4,17 +4,7 @@ import { useContext, useEffect } from "react";
 import VerTodos from "../verTodos/VerTodos.jsx";
 import SearchContext from "../context/SearchContext.jsx";
 import PerfumesDestacados from "../perfumesDestacados/PerfumesDestacados.jsx";
-import {
-  Favorite,
-  Instagram,
-  WhatsApp,
-  WhatshotRounded,
-} from "@mui/icons-material";
-import ProfileUser from "../login/ProfileUser.jsx";
-import LoginButton from "../login/LoginButton.jsx";
-import { useAuth0 } from "@auth0/auth0-react";
-import Logout from "../login/Logout.jsx";
-import { NavLink } from "react-router-dom";
+
 
 export default function Inicio() {
   useEffect(() => {
@@ -33,7 +23,8 @@ export default function Inicio() {
 
   return (
     <div className="inicioContainer">
-      <PerfumesDestacados />
+      <h1 className="titleIndex">Widi Store</h1>
+      
       {search.length > 0 ? (
         searchedProducts.length > 0 ? (
           <ListPerfumesCard perfumes={searchedProducts} />
@@ -41,10 +32,13 @@ export default function Inicio() {
           <div>No se encontró el perfume</div>
         )
       ) : (
-        ""
+        <div>
+        <PerfumesDestacados />
+        <VerTodos />
+        </div>
       )}
 
-      <VerTodos />
+      
 
       
     </div>
