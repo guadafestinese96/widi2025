@@ -32,7 +32,7 @@ export default function ProfileUser() {
       {isAuthenticated ? (
         <ImgUser src={user.picture} alt={user.name} />
       ) : (
-        <Person2Rounded />
+        <Person2Rounded style={{color: "white"}} />
       )}
     </DivUser>
   );
