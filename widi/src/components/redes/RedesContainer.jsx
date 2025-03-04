@@ -1,8 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Instagram, WhatsApp } from "@mui/icons-material";
 import styled from "styled-components";
-import { useContext } from "react";
-import CartContext from "../context/CartContext";
 
 const RedesContainerDiv = styled.div`
   display: flex;
@@ -47,19 +45,9 @@ const IgWpP = styled.p`
   }
 `;
 export default function RedesContainer() {
-  const phoneNumber = "5491161950112";
-  const { cart } = useContext(CartContext);
-  console.log(cart);
-  
-  const itemsWpCart = cart.map((item) => item.marca + " " + item.nombre).join(", ");
-  
-  console.log(itemsWpCart);
-
-  const mensaje = encodeURIComponent(
-    `Hola! Quiero comprar los perfumes ${itemsWpCart}`
-  );
-  console.log(mensaje);
-
+    const phoneNumber = "5491161950112";
+    const mensaje = "Hola Widi Store! Te quiero consultar por ";
+    
   return (
     <RedesContainerDiv>
       <NavLink to="https://www.instagram.com/widistoreok__" target="_blank">

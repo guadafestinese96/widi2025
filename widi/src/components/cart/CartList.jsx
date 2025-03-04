@@ -16,7 +16,14 @@ export default function CartList() {
   const { cart, formatNumber, clearCart, totalPrecioCarrito } =
     useContext(CartContext);
 
-  
+  const phoneNumber = "5491161950112";
+
+  const itemsWpCart = cart.map((item) => item.quantity + " " + item.nombre).join(", ");
+
+  const mensaje = encodeURIComponent(
+    `Hola Widi Store! Quiero comprar los perfumes: ${itemsWpCart}`
+  );
+
 
   return (
     <div className="cartListContainer">
@@ -33,9 +40,15 @@ export default function CartList() {
                 {" "}
                 Borrar carrito <DeleteForeverOutlined />
               </button>
-              <button className="btnFinalizarCompra">
-                Finalizar compra <CheckRounded />
-              </button>
+              <NavLink
+                to={`https://wa.me/${phoneNumber}?text=${mensaje}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="btnFinalizarCompra">
+                  Finalizar compra <CheckRounded />
+                </button>
+              </NavLink>
             </div>
           </div>
         </div>
