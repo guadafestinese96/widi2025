@@ -45,7 +45,7 @@ font-size: 12px;
     }
 `
 export default function RedesContainer(){
-    const mensaje = "hola";
+    const mensaje = encodeURIComponent("hola");
 
     return(
         <RedesContainerDiv>
