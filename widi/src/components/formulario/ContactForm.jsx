@@ -1,5 +1,4 @@
 import { useForm, ValidationError } from "@formspree/react";
-import './ContactForm.css'
 import { useState } from "react";
 import styled from "styled-components";
 
