@@ -10,7 +10,7 @@ export default function Layout({ children }) {
       <Footer/>
       
       <div className="childrenContainer">{children}</div>
-      <RedesContainer/>
+      
     </div>
   );
 }
