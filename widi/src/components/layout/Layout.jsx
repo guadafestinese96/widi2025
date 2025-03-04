@@ -25,7 +25,7 @@ export default function Layout({ children }) {
       <Footer/>
       
       <ChildrenContainer>{children}</ChildrenContainer>
-      
+      <RedesContainer/>
     </BodyLayout>
   );
 }

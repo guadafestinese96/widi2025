@@ -1,27 +1,71 @@
 import './RedesContainer.css'
 import { NavLink } from 'react-router-dom'
 import { Instagram, WhatsApp } from '@mui/icons-material'
+import styled from 'styled-components'
 
+const RedesContainerDiv = styled.div`
+display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+    padding: 8px 25px 8px 25px;
+    bottom: 0;
+    position: fixed;
+    background-color: var(--colorSecundario);
+    border-radius: 25px 25px 0 0 ;
+`
+const IgWpContainer = styled.div`
+display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+`
+const IgWp = styled.div`
+background-color: var(--colorPrimario);
+    border-radius: 5px;
+    padding: 5px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    color: black;
+
+    &:hover{
+    color: var(--colorSecundario);
+    }
+`
+const IgWpP = styled.p`
+font-size: 12px;
+    font-weight: bold;
+
+    &:hover{
+    color: var(--colorPrimario);
+    transition: 0.5s;
+    }
+`
 export default function RedesContainer(){
     return(
-        <div className="redesContainer">
+        <RedesContainerDiv>
         <NavLink to="https://www.instagram.com/widistoreok__" target="_blank">
-          <div className="instagramContainer">
-            <div className="instagram">
+          <IgWpContainer>
+            <IgWp>
               <Instagram />
-            </div>
+            </IgWp>
             <p>@widistoreok__</p>
-          </div>
+          </IgWpContainer>
         </NavLink>
 
         <NavLink>
-          <div className="whatsappContainer">
-            <div className="whatsapp">
+          <IgWpContainer>
+            <IgWp>
               <WhatsApp />
-            </div>
+            </IgWp>
             <p>+549 1161950112</p>
-          </div>
+          </IgWpContainer>
         </NavLink>
-      </div>
+      </RedesContainerDiv>
     )
 }
+
