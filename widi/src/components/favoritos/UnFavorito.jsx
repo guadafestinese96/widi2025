@@ -54,6 +54,7 @@ display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top:5px;
+  width:100%;
 `
 const AddToCart = styled.button`
 background-color: var(--colorSecundario);

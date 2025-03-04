@@ -23,6 +23,7 @@ padding: 5px;
   border: none;
   width: 100%;
   font-family: "Poppins";
+  font-size: 16px;
 `
 
 const InputNombre = styled.input`
@@ -32,9 +33,11 @@ padding: 5px;
   border: none;
   width: 100%;
   font-family: "Poppins";
+  font-size: 16px;
 `
 
 const TextArea = styled.textarea`
+font-size: 16px;
   resize: none;
   padding: 5px;
   text-transform: capitalize;
