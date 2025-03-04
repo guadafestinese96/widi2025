@@ -1,6 +1,76 @@
 import { useForm, ValidationError } from "@formspree/react";
 import './ContactForm.css'
 import { useState } from "react";
+import styled from "styled-components";
+
+const ContactFormContainer = styled.form`
+display: flex;
+  flex-direction: column;
+  background-color: var(--colorSecundario);
+  padding: 10px;
+  justify-content: center;
+  align-items: left;
+  width: 100%;
+  border-radius: 10px;
+  min-width: 290px;
+  margin-top: 20px;
+`
+const LabelForm = styled.label`
+margin-top: 10px;
+`
+const InputForm = styled.input`
+padding: 5px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  font-family: "Poppins";
+`
+
+const InputNombre = styled.input`
+text-transform: capitalize;
+`
+
+const TextArea = styled.textarea`
+  resize: none;
+  padding: 5px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  height: 100px;
+  font-family: "Poppins";
+`
+
+const ButtonForm = styled.button`
+background-color: var(--colorPrimario);
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins";
+    width: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+`
+
+const MensajeRespusta = styled.p`
+text-align: center;
+font-family: "Poppins";
+font-size: 15px; 
+`
+
+
+/* con esto le saco los botones de flecha del input number
+.inputWhatsapp::-webkit-outer-spin-button,
+.inputWhatsapp::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+*/
+
+
+
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("xvgpjpkb");
@@ -9,37 +79,37 @@ export default function ContactForm() {
   if (state.succeeded) {
     return (
         <div>
-            <p className="mensajeRespuesta">¡ Gracias por tu consulta <strong>{nombre.toUpperCase()}</strong> !</p>
-             <p className="mensajeRespuesta">Te estaremos respondiendo a la brevedad.</p>
+            <MensajeRespusta>¡ Gracias por tu consulta <strong>{nombre.toUpperCase()}</strong> !</MensajeRespusta>
+             <MensajeRespusta>Te estaremos respondiendo a la brevedad.</MensajeRespusta>
         </div>
       
     );
   }
   return (
-    <form onSubmit={handleSubmit} className="contactForm">
-      <label htmlFor="nombre" className="labelNombre">Nombre:</label>
+    <ContactFormContainer onSubmit={handleSubmit} className="contactForm">
+      <LabelForm htmlFor="nombre" className="labelNombre">Nombre:</LabelForm>
       <input id="nombre" type="text" name="nombre" className="inputNombre" required 
         onChange={(e)=>{
             setNombre(e.target.value)
         }}
       />
 
-      <label htmlFor="nombre">Whatsapp:</label>
-      <input id="nombre" type="number" name="nombre" className="inputWhatsapp" required/>
+      <LabelForm htmlFor="whatsapp">Whatsapp:</LabelForm>
+      <InputNombre id="whatsapp" type="number" name="nombre" className="inputWhatsapp" required/>
 
-      <label htmlFor="email">Email:</label>
-      <input id="email" type="email" name="email" required/>
+      <LabelForm htmlFor="email">Email:</LabelForm>
+      <InputForm id="email" type="email" name="email" required/>
 
       <ValidationError prefix="Email" field="email" errors={state.errors} />
     
 
-      <label htmlFor="message">Consulta:</label>
-      <textarea id="message" name="message" required/>
+      <LabelForm htmlFor="message">Consulta:</LabelForm>
+      <TextArea id="message" name="message" required/>
 
       <ValidationError prefix="Message" field="message" errors={state.errors} />
-      <button type="submit" disabled={state.submitting}>
+      <ButtonForm type="submit" disabled={state.submitting}>
         Enviar
-      </button>
-    </form>
+      </ButtonForm>
+    </ContactFormContainer>
   );
 }
