@@ -86,6 +86,18 @@ heigth: 100vh;
 
 `
 
+const ContactDiv = styled.div`
+display: flex;
+flex-direction:column;
+justify-content: center;
+`
+
+const ContactoH1 = styled.h1`
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: var(--colorPrimario);
+`
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("xvgpjpkb");
@@ -101,6 +113,8 @@ export default function ContactForm() {
     );
   }
   return (
+    <ContactDiv>
+      <ContactoH1>Contacto</ContactoH1>
     <ContactFormContainer onSubmit={handleSubmit} className="contactForm">
       <LabelForm htmlFor="nombre" className="labelNombre">Nombre:</LabelForm>
       <InputNombre id="nombre" type="text" name="nombre" className="inputNombre" required 
@@ -126,5 +140,6 @@ export default function ContactForm() {
         Enviar
       </ButtonForm>
     </ContactFormContainer>
+    </ContactDiv>
   );
 }
