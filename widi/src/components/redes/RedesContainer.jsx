@@ -12,7 +12,9 @@ const RedesContainerDiv = styled.div`
   position: fixed;
   background-color: var(--colorSecundario);
   border-radius: 25px 25px 0 0;
+  box-shadow: 0px -5px 10px #888;
 `;
+
 const IgWpContainer = styled.div`
   display: flex;
   justify-content: center;
