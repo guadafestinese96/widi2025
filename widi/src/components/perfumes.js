@@ -127,6 +127,134 @@ const perfumes = [
         img: "erba-removebg-preview.png",
         stock: 0
     }
+    ,{
+        id: 15,
+        idMarca: "mugler",
+        marca: "Thierry Mugler",
+        nombre: "Alien",
+        genero: "femenino",
+        precio: "32000",
+        img: "alien-removebg-preview.png",
+        stock: 1
+    },{
+        id: 16,
+        idMarca: "mugler",
+        marca: "Thierry Mugler",
+        nombre: "A Men",
+        genero: "masculino",
+        precio: "32000",
+        img: "aMen-removebg-preview.png",
+        stock: 1
+    },{
+        id: 17,
+        idMarca: "mugler",
+        marca: "Thierry Mugler",
+        nombre: "Angel",
+        genero: "femenino",
+        precio: "32000",
+        img: "angel.png",
+        stock: 1
+    },{
+        id: 18,
+        idMarca: "ch",
+        marca: "Carolina Herrera",
+        nombre: "Bad Boy",
+        genero: "masculino",
+        precio: "32000",
+        img: "badBoy-removebg-preview.png",
+        stock: 1
+    },{
+        id: 19,
+        idMarca: "paco",
+        marca: "Paco Rabanne",
+        nombre: "Black XS Men",
+        genero: "masculino",
+        precio: "32000",
+        img: "blackXsH.png",
+        stock: 1
+    },{
+        id: 20,
+        idMarca: "paco",
+        marca: "Paco Rabanne",
+        nombre: "Black XS L'Excess Men",
+        genero: "masculino",
+        precio: "32000",
+        img: "blackXsLexcessH.png",
+        stock: 1
+    },{
+        id: 21,
+        idMarca: "paco",
+        marca: "Paco Rabanne",
+        nombre: "Black XS L'Excess Women",
+        genero: "femenino",
+        precio: "32000",
+        img: "blackXsLexcessM.png",
+        stock: 1
+    },{
+        id: 22,
+        idMarca: "paco",
+        marca: "Paco Rabanne",
+        nombre: "Black XS Women",
+        genero: "femenino",
+        precio: "32000",
+        img: "blackXsM.png",
+        stock: 1
+    },{
+        id: 23,
+        idMarca: "ck",
+        marca: "Calvin Klein",
+        nombre: "One",
+        genero: "unisex",
+        precio: "32000",
+        img: "ckOne-removebg-preview.png",
+        stock: 1
+    },{
+        id: 23,
+        idMarca: "ck",
+        marca: "Calvin Klein",
+        nombre: "Escape",
+        genero: "femenino",
+        precio: "32000",
+        img: "escape-removebg-preview.png",
+        stock: 1
+    },{
+        id: 24,
+        idMarca: "ck",
+        marca: "Calvin Klein",
+        nombre: "Eternity",
+        genero: "femenino",
+        precio: "32000",
+        img: "eternity-removebg-preview.png",
+        stock: 1
+    },{
+        id: 25,
+        idMarca: "dior",
+        marca: "Dior",
+        nombre: "Farenheit",
+        genero: "masculino",
+        precio: "32000",
+        img: "fht-removebg-preview.png",
+        stock: 1
+    },{
+        id: 26,
+        idMarca: "kenzo",
+        marca: "Kenzo",
+        nombre: "Flower",
+        genero: "femenino",
+        precio: "32000",
+        img: "flower-removebg-preview.png",
+        stock: 1
+    },
+    {
+        id: 27,
+        idMarca: "ch",
+        marca: "Carolina Herrera",
+        nombre: "Good Girl",
+        genero: "femenino",
+        precio: "32000",
+        img: "goodGirl-removebg-preview.png",
+        stock: 0
+    }
 ]
 
 export default perfumes;
