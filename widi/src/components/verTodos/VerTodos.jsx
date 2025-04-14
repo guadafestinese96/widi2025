@@ -8,6 +8,7 @@ const VerTodosContainer = styled.div`
   font-size: 12px;
   align-items: center;
   color: black;
+  margin-top: 20px;
 `;
 const MuiSvgIconRoot = styled.div`
   color: var(--colorPrimario);

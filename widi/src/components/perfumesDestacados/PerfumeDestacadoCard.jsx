@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const PerfumeDestacadoContainer = styled.div`
-display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -10,10 +10,11 @@ display: flex;
     border-radius: 10px;
     width: 100px;
     border: 1px solid var(--colorPrimario);
-    background-color: rgba(0, 0, 0, 0.2);
+    // background-color: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom,#ffffff, var(--colorSecundario), #000000);
 `
 const PerfumeDestacadoImg = styled.img`
- width: 100px;
+    width: 100px;
     height: 80px;
     filter: drop-shadow(5px 5px 20px black);
     background-color: unset;
@@ -27,6 +28,7 @@ const PerfumeDestacadoH3 = styled.h3`
 `
 const PerfumeDestacadoH4 = styled.h4`
  font-size: 10px;
+ color: white;
 `
 
 

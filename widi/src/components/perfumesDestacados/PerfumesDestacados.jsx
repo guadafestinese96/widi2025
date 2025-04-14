@@ -3,20 +3,22 @@ import PerfumeDestacadoCard from './PerfumeDestacadoCard.jsx';
 import styled from 'styled-components';
 
 const DestacadosContainer = styled.div`
-display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
 `
 const DestacadosH1 = styled.h1`
+    margin-top: 20px;
     font-size: 18px;
     text-align: center;
     color: var(--colorPrimario);
+    
 `
 
 const PerfumesDestacadosContainer = styled.div`
-display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 `

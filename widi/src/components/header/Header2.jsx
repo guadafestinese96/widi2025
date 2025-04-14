@@ -21,6 +21,7 @@ const Header2Div = styled.div`
   z-index: 101;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
 `;
+
 const ImgHeader2 = styled.img`
   width: 50px;
 `;
