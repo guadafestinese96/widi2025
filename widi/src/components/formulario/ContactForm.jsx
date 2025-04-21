@@ -93,7 +93,6 @@ justify-content: center;
 `
 
 const ContactoH1 = styled.h1`
-    margin-top: 20px;
     font-size: 18px;
     text-align: center;
     color: var(--colorPrimario);
