@@ -34,7 +34,9 @@ const DestacadosH1 = styled.h1`
     color: var(--colorPrimario);
     margin-bottom: 20px;
 `
-
+const Option = styled.option`
+    color: black;
+`
 
 export default function VerTodosPerfumes() {
   const { search, searchedProducts } = useContext(SearchContext);
@@ -63,10 +65,10 @@ export default function VerTodosPerfumes() {
             setSelect(e.target.value);
           }}
         >
-          <option value="all" className="optionSelect" style={{color: "black"}}>TODOS</option>
-          <option value="femenino" className="optionSelect">Femenino</option>
-          <option value="masculino" className="optionSelect">Masculino</option>
-          <option value="unisex" className="optionSelect">Unisex</option>
+          <Option value="all" className="optionSelect" style={{color: "black"}}>TODOS</Option>
+          <Option value="femenino" className="optionSelect">Femenino</Option>
+          <Option value="masculino" className="optionSelect">Masculino</Option>
+          <Option value="unisex" className="optionSelect">Unisex</Option>
         </SelectGender>
       </SelectContainer>
 

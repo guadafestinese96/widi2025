@@ -4,6 +4,7 @@ import VerTodos from "../verTodos/VerTodos.jsx";
 import SearchContext from "../context/SearchContext.jsx";
 import PerfumesDestacados from "../perfumesDestacados/PerfumesDestacados.jsx";
 import styled from "styled-components";
+import VerTodosPerfumes from "../verTodos/VerTodosPerfumes.jsx";
 
 const TitleIndex = styled.h1`
 font-family: "Qwitcher Grypen", cursive;    
@@ -43,8 +44,7 @@ export default function Inicio() {
         )
       ) : (
         <div>
-        <PerfumesDestacados />
-        <VerTodos />
+        <VerTodosPerfumes/>
         </div>
       )}
 
@@ -54,3 +54,9 @@ export default function Inicio() {
     </div>
   );
 }
+
+
+{/* <div>
+        <PerfumesDestacados />
+        <VerTodos />
+        </div> */}

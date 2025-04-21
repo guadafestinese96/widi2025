@@ -209,15 +209,6 @@ const perfumes = [
         img: "ckOne-removebg-preview.png",
         stock: 1
     },{
-        id: 23,
-        idMarca: "ck",
-        marca: "Calvin Klein",
-        nombre: "Escape",
-        genero: "femenino",
-        precio: "32000",
-        img: "escape-removebg-preview.png",
-        stock: 1
-    },{
         id: 24,
         idMarca: "ck",
         marca: "Calvin Klein",
@@ -254,6 +245,163 @@ const perfumes = [
         precio: "32000",
         img: "goodGirl-removebg-preview.png",
         stock: 0
+    },
+    {
+        id: 28,
+        idMarca: "jdp",
+        marca: "Jesús del Pozo",
+        nombre: "Halloween",
+        genero: "femenino",
+        precio: "32000",
+        img: "hallo-removebg-preview.png",
+        stock: 0
+    },{
+        id: 29,
+        idMarca: "paco",
+        marca: "Paco Rabanne",
+        nombre: "Invictus",
+        genero: "masculino",
+        precio: "32000",
+        img: "invictus.png",
+        stock: 1
+    },{
+        id: 30,
+        idMarca: "dior",
+        marca: "Dior",
+        nombre: "Jadore",
+        genero: "femenino",
+        precio: "32000",
+        img: "jadore-removebg-preview.png",
+        stock: 1
+    },{
+        id: 31,
+        idMarca: "kenzo",
+        marca: "Kenzo",
+        nombre: "Classic",
+        genero: "masculino",
+        precio: "32000",
+        img: "kenzoH-removebg-preview.png",
+        stock: 1
+    },{
+        id: 32,
+        idMarca: "paco",
+        marca: "Paco Rabanne",
+        nombre: "Lady Million",
+        genero: "femenino",
+        precio: "32000",
+        img: "ladyMillion.png",
+        stock: 1
+    },{
+        id: 33,
+        idMarca: "givenchy",
+        marca: "Givenchy",
+        nombre: "Linterdit",
+        genero: "femenino",
+        precio: "32000",
+        img: "linterdit-removebg-preview.png",
+        stock: 1
+    },{
+        id: 34,
+        idMarca: "lancome",
+        marca: "Lancome",
+        nombre: "La Vie Est Belle",
+        genero: "femenino",
+        precio: "32000",
+        img: "lvb-removebg-preview.png",
+        stock: 1
+    },{
+        id: 35,
+        idMarca: "dior",
+        marca: "Dior",
+        nombre: "Miss Dior",
+        genero: "femenino",
+        precio: "32000",
+        img: "missDior-removebg-preview.png",
+        stock: 1
+    },{
+        id: 36,
+        idMarca: "miyake",
+        marca: "Issey Miyake",
+        nombre: "L' Eau D' Issey women",
+        genero: "femenino",
+        precio: "32000",
+        img: "miyakeM-removebg-preview.png",
+        stock: 1
+    },{
+        id: 37,
+        idMarca: "miyake",
+        marca: "Issey Miyake",
+        nombre: "L' Eau D' Issey men",
+        genero: "masculino",
+        precio: "32000",
+        img: "miyakeH-removebg-preview.png",
+        stock: 1
+    },{
+        id: 38,
+        idMarca: "ysl",
+        marca: "Yves Saint Lauren",
+        nombre: "Mon Paris",
+        genero: "masculino",
+        precio: "32000",
+        img: "monParis-removebg-preview.png",
+        stock: 1
+    },{
+        id: 39,
+        idMarca: "paco",
+        marca: "Paco Rabanne",
+        nombre: "Olympea",
+        genero: "femenino",
+        precio: "32000",
+        img: "olympea.png",
+        stock: 1
+    },
+    {
+        id: 40,
+        idMarca: "jpg",
+        marca: "Jean Paul Gaultier",
+        nombre: "Scandal",
+        genero: "femenino",
+        precio: "32000",
+        img: "scandal-removebg-preview.png",
+        stock: 1
+    },
+    
+    {
+        id: 41,
+        idMarca: "paco",
+        marca: "Paco Rabanne",
+        nombre: "One Million",
+        genero: "masculino",
+        precio: "32000",
+        img: "oneMillion.png",
+        stock: 1
+    },{
+        id: 42,
+        idMarca: "paco",
+        marca: "Paco Rabanne",
+        nombre: "Phantom",
+        genero: "masculino",
+        precio: "32000",
+        img: "phantom.png",
+        stock: 1
+    },{
+        id: 43,
+        idMarca: "bvlgary",
+        marca: "Bvlgary",
+        nombre: "Pour Home",
+        genero: "masculino",
+        precio: "32000",
+        img: "pourHomme-removebg-preview.png",
+        stock: 1
+    },{
+        id: 44,
+        idMarca: "armani",
+        marca: "Armani",
+        nombre: "Si",
+        genero: "femenino",
+        precio: "32000",
+        img: "si.png",
+        stock: 1
     }
 ]
 
