@@ -10,6 +10,10 @@ display: flex;
 `
 
 export default function ListPerfumesCard({ perfumes }) {
+  const perfumesPrecioChange = perfumes.map(perfume=>(
+    perfume.precio = 25000
+  ))
+  
   const perfumesOrdenados = [...perfumes].sort((a,b)=> a.marca.localeCompare(b.marca))
   console.log(perfumesOrdenados)
 
