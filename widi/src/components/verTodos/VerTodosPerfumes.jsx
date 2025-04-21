@@ -5,10 +5,11 @@ import ListPerfumesCard from "../perfumesCard/ListPerfumesCard";
 import styled from "styled-components";
 
 const SelectContainer = styled.div`
-width: 100vw;
+  width: 100vw;
   display: flex;
   justify-content: left;
   color:black;
+  padding-left: 20px;
 `
 
 const SelectLabel = styled.label`
@@ -19,7 +20,7 @@ font-family: "Poppins";
   padding: 5px;
   border: 1px solid var(--colorPrimario);
   background-color: var(--colorPrimario);
-  border-radius: 10px;
+  border-radius: 5px;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
