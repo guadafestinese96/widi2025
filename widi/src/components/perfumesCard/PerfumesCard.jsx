@@ -80,7 +80,7 @@ border:none;
 
 
 export default function PerfumesCard({ perfume }) {
-  const { cart, addToCart, favoritos, addToFavoritos } = useContext(CartContext);
+  const { cart, addToCart, favoritos, addToFavoritos, formatNumber } = useContext(CartContext);
   const isItemInCart = cart.find((item) => item.id === perfume.id);
   const isItemInFav = favoritos.find(item=> item.id === perfume.id)
 
@@ -89,7 +89,7 @@ export default function PerfumesCard({ perfume }) {
       <CardImg src={`/images/${perfume.img}`} alt="imgCard" />
       <CardH3>{perfume.marca}</CardH3>
       <CardH4>{perfume.nombre}</CardH4>
-      <CardP>${perfume.precio}</CardP>
+      <CardP>${formatNumber(perfume.precio)}</CardP>
       <ButtonsPerfumesCard>
         {isItemInCart ? (
           <AddedToCart className="addedToCart">
