@@ -53,10 +53,10 @@ export default function Admin() {
     return (
       <div className="admin-aviso">
         <h1>Falta conectar la base de datos</h1>
-        <p>
+        {/* <p>
           Creá el archivo <code>.env</code> con los datos de Supabase (copiá <code>.env.example</code>) y reiniciá{" "}
           <code>npm run dev</code>. Los pasos están en el README.
-        </p>
+        </p> */}
         <Link to="/" className="boton">Volver a la tienda</Link>
       </div>
     );
