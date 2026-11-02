@@ -1,7 +1,0 @@
-
-/* con esto le saco los botones de flecha del input number */
-.inputWhatsapp::-webkit-outer-spin-button,
-.inputWhatsapp::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}

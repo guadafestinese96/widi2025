@@ -1,33 +1,45 @@
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/layout/Layout";
-import Inicio from "./components/inicio/Inicio";
-import CartProvider from "./components/context/CartProvider";
-import SearchProvider from "./components/context/SearchProvider";
-import ContactForm from "./components/formulario/ContactForm";
-import VerTodosPerfumes from "./components/verTodos/VerTodosPerfumes.jsx";
-import CartList from "./components/cart/CartList.jsx";
-import Favoritos from "./components/favoritos/Favoritos.jsx";
+import { lazy, Suspense } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { CatalogoProvider } from "./context/CatalogoContext";
+import { CarritoProvider } from "./context/CarritoContext";
+import { AuthProvider } from "./context/AuthContext";
+import Layout from "./layout/Layout";
+import Inicio from "./paginas/Inicio";
+import Carrito from "./paginas/Carrito";
+import Favoritos from "./paginas/Favoritos";
+import Contacto from "./paginas/Contacto";
 
+// El panel se descarga solo cuando alguien entra a /admin
+const Admin = lazy(() => import("./admin/Admin"));
 
-export default function App(){
+export default function App() {
   return (
     <BrowserRouter>
-      <SearchProvider>
-        <CartProvider>
-          <Layout>
+      <AuthProvider>
+        <CatalogoProvider>
+          <CarritoProvider>
             <Routes>
-              <Route path="/" element={<Inicio />} />
-              <Route path="/contact" element={<ContactForm />} />
-              <Route path="/vertodos" element={<VerTodosPerfumes />} />
-              <Route path="/carrito" element={<CartList />} />
-              <Route path="/favoritos" element={<Favoritos/>}/>
+              <Route element={<Layout />}>
+                <Route path="/" element={<Inicio />} />
+                <Route path="/carrito" element={<Carrito />} />
+                <Route path="/favoritos" element={<Favoritos />} />
+                <Route path="/contacto" element={<Contacto />} />
+                <Route path="/contact" element={<Navigate to="/contacto" replace />} />
+                <Route path="/vertodos" element={<Navigate to="/" replace />} />
+              </Route>
+              <Route
+                path="/admin"
+                element={
+                  <Suspense fallback={<p className="cargando">Cargando panel…</p>}>
+                    <Admin />
+                  </Suspense>
+                }
+              />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
-          </Layout>
-        </CartProvider>
-      </SearchProvider>
-      </BrowserRouter>
+          </CarritoProvider>
+        </CatalogoProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
-
-

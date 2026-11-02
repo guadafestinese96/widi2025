@@ -1,35 +1,257 @@
-*{
-  margin: 0;
+/* ===================================================================
+   Widi Store — estilos generales
+   Negro, rosa Widi y gris claro; títulos en Qwitcher Grypen, texto en Poppins.
+   =================================================================== */
+:root {
+  /* Paleta de la marca (Canva / Instagram) */
+  --rosa: #f6c7c6;
+  --crema: #f3eee9;
+  --oscuro: #1f1f1f;
+  /* Derivados */
+  --rosa-suave: #fbe3e2;
+  --acento: #9c4b55; /* rosa profundo para textos y detalles: contraste legible sobre crema */
+  --blanco: #ffffff;
+  --gris-linea: #e3dcd5;
+  --texto: #1f1f1f;
+  --texto-suave: #6f6862;
+  --ok: #2e7d4f;
+  --error: #b3261e;
+  --radio: 18px;
+  --sombra: 0 8px 24px rgba(31, 31, 31, 0.08);
+  --alto-header: 64px;
+  --alto-menu: 60px;
+  --alto-redes: 46px;
+  --fuente-titulo: "Bodoni Moda", "Didot", Georgia, serif;
+  --fuente-firma: "Qwitcher Grypen", cursive;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  margin: 0;
   padding: 0;
 }
 
-ul{
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  font-weight: 300;
+  color: var(--texto);
+  background: var(--crema);
+  min-height: 100vh;
+}
+
+ul {
   list-style: none;
 }
 
-a{
+a {
+  color: inherit;
   text-decoration: none;
 }
 
-img{
+img {
   max-width: 100%;
+  display: block;
 }
 
-.app{
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-  --colorPrimario: #ff13a7;
-  --colorSecundario: #d9d9d9;
-  display: flex;
-  align-items: center;
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+}
+
+/* Marca: "Widi" en letra de alto contraste y "store" en firma, como el logo */
+.marca-texto {
+  display: inline-flex;
   flex-direction: column;
-  font-family: "Poppins", serif;
-  font-weight: 300;
+  align-items: center;
+  line-height: 0.9;
+  color: var(--oscuro);
+}
+.marca-texto .widi {
+  font-family: var(--fuente-titulo);
+  font-weight: 800;
+  font-size: clamp(56px, 11vw, 92px);
+  letter-spacing: -0.02em;
+}
+.marca-texto .store {
+  font-family: var(--fuente-firma);
+  font-size: clamp(40px, 7vw, 60px);
+  margin-top: -0.15em;
+  margin-left: 0.8em;
 }
 
-.app::-webkit-scrollbar{
-  display: none;
+/* Títulos de sección: palabra en firma, como en los posteos */
+.titulo-seccion {
+  font-family: var(--fuente-firma);
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1;
+  text-align: center;
+  color: var(--oscuro);
+  margin-bottom: 18px;
 }
 
+/* Botones */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 42px;
+  padding: 8px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--oscuro);
+  color: var(--crema);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s, color 0.2s;
+}
+.boton:hover:not(:disabled) {
+  background: var(--rosa);
+  color: var(--oscuro);
+}
+.boton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.boton.secundario {
+  background: transparent;
+  border: 1.5px solid var(--oscuro);
+  color: var(--oscuro);
+}
+.boton.secundario:hover:not(:disabled) {
+  background: var(--oscuro);
+  color: var(--crema);
+}
+.boton.whatsapp {
+  background: var(--oscuro);
+  color: var(--crema);
+}
+.boton.whatsapp:hover:not(:disabled) {
+  background: #25d366;
+  color: var(--oscuro);
+}
+.boton.chico {
+  min-height: 32px;
+  padding: 4px 12px;
+  font-size: 12px;
+}
+.boton.ancho {
+  width: 100%;
+}
+
+/* Formularios */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+.campo label,
+.etiqueta {
+  font-size: 13px;
+  font-weight: 500;
+}
+.entrada {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--gris-linea);
+  border-radius: 12px;
+  background: var(--blanco);
+  font-size: 16px;
+}
+.entrada:focus {
+  outline: none;
+  border-color: var(--oscuro);
+  box-shadow: 0 0 0 3px var(--rosa);
+}
+textarea.entrada {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Fichas (filtros) */
+.fichas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ficha {
+  min-height: 34px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  border: 1.5px solid var(--oscuro);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+}
+.ficha[aria-pressed="true"] {
+  background: var(--oscuro);
+  color: var(--crema);
+}
+
+.mensaje {
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.mensaje.error {
+  background: #fdecea;
+  color: var(--error);
+}
+.mensaje.ok {
+  background: #e7f6ec;
+  color: var(--ok);
+}
+.mensaje.info {
+  background: var(--rosa-suave);
+  color: #6e2e37;
+}
+
+.vacio {
+  text-align: center;
+  color: var(--texto-suave);
+  padding: 40px 16px;
+}
+
+.cargando {
+  text-align: center;
+  color: var(--texto-suave);
+  padding: 40px 16px;
+}
+
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
